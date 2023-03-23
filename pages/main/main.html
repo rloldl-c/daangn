@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>당신 근처의 당근마켓</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="navdiv">
+      <nav class="navbar navbar-expand-md">
+        <div class="nav-con">
+          <a class="brand" href="#">
+            <svg width="100" height="28" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6241 5.1897C4.76013 5.1897 0 9.94831 0 15.8104C0 18.2759 0.845096 20.5345 2.24209 22.3276C2.34557 22.4655 2.4663 22.6035 2.56978 22.7414C2.74225 22.9311 2.89747 23.1207 3.08719 23.3104L3.10443 23.3276C5.13956 25.4828 7.70934 27.1207 10.6068 28C13.5043 27.1207 16.0741 25.4828 18.1092 23.3276L18.1264 23.3104C18.2989 23.1207 18.4714 22.9311 18.6439 22.7414C18.7646 22.6035 18.8681 22.4655 18.9715 22.3276C20.3685 20.5345 21.2136 18.2759 21.2136 15.8104C21.2309 9.93107 16.488 5.1897 10.6241 5.1897ZM10.6241 19.8621C8.38197 19.8621 6.57105 18.0518 6.57105 15.8104C6.57105 13.569 8.38197 11.7587 10.6241 11.7587C12.8662 11.7587 14.6771 13.569 14.6771 15.8104C14.6771 18.0518 12.8662 19.8621 10.6241 19.8621Z" fill="#FF7E36"></path><path d="M14.0743 4.96552C14.7814 4.81035 15.2988 4.18965 15.2988 3.44827C15.2988 2.58621 14.5917 1.87931 13.7293 1.87931C13.4879 1.87931 13.2637 1.93104 13.0567 2.03449C12.8325 0.879318 11.8322 0 10.6076 0C9.38312 0 8.3828 0.879318 8.1586 2.03449C7.95163 1.93104 7.72742 1.87931 7.48597 1.87931C6.62363 1.87931 5.9165 2.58621 5.9165 3.44827C5.9165 4.18965 6.45116 4.81035 7.14103 4.96552C8.22758 4.58621 9.38312 4.37931 10.5904 4.37931C11.7977 4.37931 12.9877 4.58621 14.0743 4.96552Z" fill="#00B493"></path><path d="M28.8191 15.9481H35.3211C36.1317 15.9481 36.7699 15.4654 36.7699 14.4654C36.7699 13.4654 36.1317 12.9826 35.3211 12.9826H29.6642C29.371 12.9826 29.1985 12.8102 29.1985 12.5344V9.98264C29.1985 9.70678 29.371 9.53437 29.6642 9.53437H35.3211C36.1317 9.53437 36.7699 9.0516 36.7699 8.0516C36.7699 7.0516 36.1317 6.56885 35.3211 6.56885H28.8191C26.6115 6.56885 25.5767 7.5516 25.5767 9.39643V13.1378C25.5767 14.9826 26.6115 15.9481 28.8191 15.9481Z" fill="#FF7E36"></path><path d="M36.9594 17.1379H30.5608C27.6806 17.1379 25.7834 18.7241 25.7834 21.0517C25.7834 23.3276 27.6806 24.9138 30.5608 24.9138H36.9594C39.8396 24.9138 41.754 23.3276 41.754 21.0517C41.754 18.7414 39.8396 17.1379 36.9594 17.1379ZM36.9594 21.9138H30.5608C29.8537 21.9138 29.4743 21.5345 29.4743 21.0517C29.4743 20.5345 29.8537 20.1379 30.5608 20.1379H36.9594C37.6665 20.1379 38.0632 20.5345 38.0632 21.0517C38.0632 21.5345 37.6493 21.9138 36.9594 21.9138Z" fill="#FF7E36"></path><path d="M42.3754 9.60339H41.3578V7.65512C41.3578 6.81029 40.6162 6.17236 39.5469 6.17236C38.4776 6.17236 37.7188 6.81029 37.7188 7.65512V15.2068C37.7188 16.0517 38.4776 16.6896 39.5469 16.6896C40.6162 16.6896 41.3578 16.0517 41.3578 15.2068V13.1551H42.3754C43.2032 13.1551 43.8586 12.431 43.8586 11.3965C43.8586 10.3965 43.2032 9.60339 42.3754 9.60339Z" fill="#FF7E36"></path><path d="M60.5189 17.6206H45.6693C44.807 17.6206 44.0999 17.0516 44.0999 15.9999C44.0999 15.0171 44.807 14.4137 45.6693 14.4137H60.5189C61.3812 14.4137 62.0883 15.0344 62.0883 15.9999C62.0883 17.0344 61.3812 17.6206 60.5189 17.6206ZM57.4662 12.3964V10.4654C57.4662 10.1206 57.2764 9.93092 56.9833 9.93092H46.6869C45.79 9.93092 45.0312 9.36194 45.0312 8.27574C45.0312 7.24125 45.79 6.56885 46.6869 6.56885H57.7766C59.9842 6.56885 61.1052 7.70678 61.1052 9.72402V12.3964C61.1052 13.2413 60.3636 13.8792 59.2943 13.8792C58.225 13.8792 57.4662 13.2413 57.4662 12.3964ZM48.7565 19.7068V20.9826C48.7565 21.2413 48.9462 21.4137 49.2394 21.4137H59.829C60.7258 21.4137 61.4847 21.9999 61.4847 23.0688C61.4847 24.1033 60.7258 24.724 59.829 24.724H48.4633C46.273 24.724 45.1002 23.793 45.1002 21.8102V19.7068C45.1002 18.8619 45.8418 18.224 46.9111 18.224C47.9804 18.224 48.7565 18.8619 48.7565 19.7068Z" fill="#FF7E36"></path><path d="M63.9343 21.362V9.12063C63.9343 7.44822 64.7794 6.56891 66.5214 6.56891H71.2642C73.0062 6.56891 73.8513 7.43098 73.8513 9.12063V21.362C73.8513 23.0344 73.0062 23.9137 71.2642 23.9137H66.5214C64.7967 23.9137 63.9343 23.0517 63.9343 21.362ZM70.4364 20.2068V10.293C70.4364 10.0517 70.3157 9.91373 70.0914 9.91373H67.7114C67.5044 9.91373 67.3664 10.0689 67.3664 10.293V20.2068C67.3664 20.4482 67.4872 20.5861 67.7114 20.5861H70.0914C70.3157 20.5861 70.4364 20.431 70.4364 20.2068ZM76.0934 23.3448V7.75856C76.0934 6.86201 76.8522 6.17236 77.9215 6.17236C78.9908 6.17236 79.7324 6.87925 79.7324 7.75856V12.862H80.75C81.5779 12.862 82.2332 13.6551 82.2332 14.6379C82.2332 15.7068 81.5779 16.4482 80.75 16.4482H79.7324V23.3448C79.7324 24.2413 78.9908 24.931 77.9215 24.931C76.8522 24.931 76.0934 24.2413 76.0934 23.3448Z" fill="#FF7E36"></path><path d="M91.5291 10.4136H92.2707V7.60331C92.2707 6.79296 92.9261 6.24124 93.9264 6.24124C94.9267 6.24124 95.5476 6.79296 95.5476 7.60331V15.9826C95.5476 16.793 94.9267 17.3447 93.9264 17.3447C92.9261 17.3447 92.2707 16.793 92.2707 15.9826V13.5171H91.5291C91.1324 13.5171 90.7702 13.3274 90.5288 12.9654C89.5285 15.1723 87.7693 16.9481 85.3202 18.0343C84.5269 18.3792 83.6818 18.155 83.2333 17.4136C82.7849 16.6723 83.0781 15.7067 83.768 15.4136C84.8718 14.9309 85.7859 14.2757 86.493 13.4309H84.7166C84.0439 13.4309 83.4403 13.0343 83.4403 12.1378C83.4403 11.3102 84.0267 10.8447 84.7166 10.8447H87.8383C87.9245 10.5343 88.0107 10.1895 88.0452 9.82744C88.0797 9.55158 87.9417 9.36193 87.683 9.36193H84.8201C84.0095 9.36193 83.4403 8.89641 83.4403 7.96537C83.4403 7.06882 84.0095 6.53434 84.8201 6.53434H88.3039C90.615 6.53434 91.6843 7.63779 91.3394 10.1205C91.3221 10.2068 91.3221 10.3102 91.3049 10.3964C91.3739 10.4137 91.4428 10.4136 91.5291 10.4136ZM98.0311 24.6033C95.8236 24.1378 93.1848 22.9309 91.4773 21.5516C89.8906 23.1205 87.7693 24.2757 85.5272 24.7067C84.7683 24.8619 83.8715 24.4998 83.5955 23.5688C83.3368 22.6723 83.7852 21.8619 84.5958 21.655C87.0449 21.0171 89.08 19.6033 90.0976 17.7067C90.408 17.1378 91.2704 16.7585 92.2362 17.0516C93.2538 17.3619 93.6677 18.3274 93.3572 18.9998L93.34 19.0343C94.7542 20.2067 96.8584 21.1205 98.928 21.5688C99.7213 21.7412 100.187 22.5516 99.9283 23.4654C99.6696 24.3792 98.8073 24.7585 98.0311 24.6033ZM96.3409 16.5688V7.5171C96.3409 6.70676 97.0136 6.15503 98.0484 6.15503C99.066 6.15503 99.7213 6.70676 99.7213 7.5171V16.5688C99.7213 17.3792 99.066 17.9309 98.0484 17.9309C97.0308 17.9309 96.3409 17.3792 96.3409 16.5688Z" fill="#FF7E36"></path></svg>
+          </a>
+          <div class="d-flex align-items-center">
+            <button class="offcanvas-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="bi bi-search"></i>
+            </button>
+            <button class="offcanvas-toggler navbar-menu-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <sp class="navbar-toggler-icon"></sp  an>
+            </button>
+          </div>
+          <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <a class="brand" href="#">
+                <svg width="100" height="28" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6241 5.1897C4.76013 5.1897 0 9.94831 0 15.8104C0 18.2759 0.845096 20.5345 2.24209 22.3276C2.34557 22.4655 2.4663 22.6035 2.56978 22.7414C2.74225 22.9311 2.89747 23.1207 3.08719 23.3104L3.10443 23.3276C5.13956 25.4828 7.70934 27.1207 10.6068 28C13.5043 27.1207 16.0741 25.4828 18.1092 23.3276L18.1264 23.3104C18.2989 23.1207 18.4714 22.9311 18.6439 22.7414C18.7646 22.6035 18.8681 22.4655 18.9715 22.3276C20.3685 20.5345 21.2136 18.2759 21.2136 15.8104C21.2309 9.93107 16.488 5.1897 10.6241 5.1897ZM10.6241 19.8621C8.38197 19.8621 6.57105 18.0518 6.57105 15.8104C6.57105 13.569 8.38197 11.7587 10.6241 11.7587C12.8662 11.7587 14.6771 13.569 14.6771 15.8104C14.6771 18.0518 12.8662 19.8621 10.6241 19.8621Z" fill="#FF7E36"></path><path d="M14.0743 4.96552C14.7814 4.81035 15.2988 4.18965 15.2988 3.44827C15.2988 2.58621 14.5917 1.87931 13.7293 1.87931C13.4879 1.87931 13.2637 1.93104 13.0567 2.03449C12.8325 0.879318 11.8322 0 10.6076 0C9.38312 0 8.3828 0.879318 8.1586 2.03449C7.95163 1.93104 7.72742 1.87931 7.48597 1.87931C6.62363 1.87931 5.9165 2.58621 5.9165 3.44827C5.9165 4.18965 6.45116 4.81035 7.14103 4.96552C8.22758 4.58621 9.38312 4.37931 10.5904 4.37931C11.7977 4.37931 12.9877 4.58621 14.0743 4.96552Z" fill="#00B493"></path><path d="M28.8191 15.9481H35.3211C36.1317 15.9481 36.7699 15.4654 36.7699 14.4654C36.7699 13.4654 36.1317 12.9826 35.3211 12.9826H29.6642C29.371 12.9826 29.1985 12.8102 29.1985 12.5344V9.98264C29.1985 9.70678 29.371 9.53437 29.6642 9.53437H35.3211C36.1317 9.53437 36.7699 9.0516 36.7699 8.0516C36.7699 7.0516 36.1317 6.56885 35.3211 6.56885H28.8191C26.6115 6.56885 25.5767 7.5516 25.5767 9.39643V13.1378C25.5767 14.9826 26.6115 15.9481 28.8191 15.9481Z" fill="#FF7E36"></path><path d="M36.9594 17.1379H30.5608C27.6806 17.1379 25.7834 18.7241 25.7834 21.0517C25.7834 23.3276 27.6806 24.9138 30.5608 24.9138H36.9594C39.8396 24.9138 41.754 23.3276 41.754 21.0517C41.754 18.7414 39.8396 17.1379 36.9594 17.1379ZM36.9594 21.9138H30.5608C29.8537 21.9138 29.4743 21.5345 29.4743 21.0517C29.4743 20.5345 29.8537 20.1379 30.5608 20.1379H36.9594C37.6665 20.1379 38.0632 20.5345 38.0632 21.0517C38.0632 21.5345 37.6493 21.9138 36.9594 21.9138Z" fill="#FF7E36"></path><path d="M42.3754 9.60339H41.3578V7.65512C41.3578 6.81029 40.6162 6.17236 39.5469 6.17236C38.4776 6.17236 37.7188 6.81029 37.7188 7.65512V15.2068C37.7188 16.0517 38.4776 16.6896 39.5469 16.6896C40.6162 16.6896 41.3578 16.0517 41.3578 15.2068V13.1551H42.3754C43.2032 13.1551 43.8586 12.431 43.8586 11.3965C43.8586 10.3965 43.2032 9.60339 42.3754 9.60339Z" fill="#FF7E36"></path><path d="M60.5189 17.6206H45.6693C44.807 17.6206 44.0999 17.0516 44.0999 15.9999C44.0999 15.0171 44.807 14.4137 45.6693 14.4137H60.5189C61.3812 14.4137 62.0883 15.0344 62.0883 15.9999C62.0883 17.0344 61.3812 17.6206 60.5189 17.6206ZM57.4662 12.3964V10.4654C57.4662 10.1206 57.2764 9.93092 56.9833 9.93092H46.6869C45.79 9.93092 45.0312 9.36194 45.0312 8.27574C45.0312 7.24125 45.79 6.56885 46.6869 6.56885H57.7766C59.9842 6.56885 61.1052 7.70678 61.1052 9.72402V12.3964C61.1052 13.2413 60.3636 13.8792 59.2943 13.8792C58.225 13.8792 57.4662 13.2413 57.4662 12.3964ZM48.7565 19.7068V20.9826C48.7565 21.2413 48.9462 21.4137 49.2394 21.4137H59.829C60.7258 21.4137 61.4847 21.9999 61.4847 23.0688C61.4847 24.1033 60.7258 24.724 59.829 24.724H48.4633C46.273 24.724 45.1002 23.793 45.1002 21.8102V19.7068C45.1002 18.8619 45.8418 18.224 46.9111 18.224C47.9804 18.224 48.7565 18.8619 48.7565 19.7068Z" fill="#FF7E36"></path><path d="M63.9343 21.362V9.12063C63.9343 7.44822 64.7794 6.56891 66.5214 6.56891H71.2642C73.0062 6.56891 73.8513 7.43098 73.8513 9.12063V21.362C73.8513 23.0344 73.0062 23.9137 71.2642 23.9137H66.5214C64.7967 23.9137 63.9343 23.0517 63.9343 21.362ZM70.4364 20.2068V10.293C70.4364 10.0517 70.3157 9.91373 70.0914 9.91373H67.7114C67.5044 9.91373 67.3664 10.0689 67.3664 10.293V20.2068C67.3664 20.4482 67.4872 20.5861 67.7114 20.5861H70.0914C70.3157 20.5861 70.4364 20.431 70.4364 20.2068ZM76.0934 23.3448V7.75856C76.0934 6.86201 76.8522 6.17236 77.9215 6.17236C78.9908 6.17236 79.7324 6.87925 79.7324 7.75856V12.862H80.75C81.5779 12.862 82.2332 13.6551 82.2332 14.6379C82.2332 15.7068 81.5779 16.4482 80.75 16.4482H79.7324V23.3448C79.7324 24.2413 78.9908 24.931 77.9215 24.931C76.8522 24.931 76.0934 24.2413 76.0934 23.3448Z" fill="#FF7E36"></path><path d="M91.5291 10.4136H92.2707V7.60331C92.2707 6.79296 92.9261 6.24124 93.9264 6.24124C94.9267 6.24124 95.5476 6.79296 95.5476 7.60331V15.9826C95.5476 16.793 94.9267 17.3447 93.9264 17.3447C92.9261 17.3447 92.2707 16.793 92.2707 15.9826V13.5171H91.5291C91.1324 13.5171 90.7702 13.3274 90.5288 12.9654C89.5285 15.1723 87.7693 16.9481 85.3202 18.0343C84.5269 18.3792 83.6818 18.155 83.2333 17.4136C82.7849 16.6723 83.0781 15.7067 83.768 15.4136C84.8718 14.9309 85.7859 14.2757 86.493 13.4309H84.7166C84.0439 13.4309 83.4403 13.0343 83.4403 12.1378C83.4403 11.3102 84.0267 10.8447 84.7166 10.8447H87.8383C87.9245 10.5343 88.0107 10.1895 88.0452 9.82744C88.0797 9.55158 87.9417 9.36193 87.683 9.36193H84.8201C84.0095 9.36193 83.4403 8.89641 83.4403 7.96537C83.4403 7.06882 84.0095 6.53434 84.8201 6.53434H88.3039C90.615 6.53434 91.6843 7.63779 91.3394 10.1205C91.3221 10.2068 91.3221 10.3102 91.3049 10.3964C91.3739 10.4137 91.4428 10.4136 91.5291 10.4136ZM98.0311 24.6033C95.8236 24.1378 93.1848 22.9309 91.4773 21.5516C89.8906 23.1205 87.7693 24.2757 85.5272 24.7067C84.7683 24.8619 83.8715 24.4998 83.5955 23.5688C83.3368 22.6723 83.7852 21.8619 84.5958 21.655C87.0449 21.0171 89.08 19.6033 90.0976 17.7067C90.408 17.1378 91.2704 16.7585 92.2362 17.0516C93.2538 17.3619 93.6677 18.3274 93.3572 18.9998L93.34 19.0343C94.7542 20.2067 96.8584 21.1205 98.928 21.5688C99.7213 21.7412 100.187 22.5516 99.9283 23.4654C99.6696 24.3792 98.8073 24.7585 98.0311 24.6033ZM96.3409 16.5688V7.5171C96.3409 6.70676 97.0136 6.15503 98.0484 6.15503C99.066 6.15503 99.7213 6.70676 99.7213 7.5171V16.5688C99.7213 17.3792 99.066 17.9309 98.0484 17.9309C97.0308 17.9309 96.3409 17.3792 96.3409 16.5688Z" fill="#FF7E36"></path></svg>
+              </a>
+              <button class="offcanvas-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-search"></i>
+              </button>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="main.html">중고거래</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="nearby_store.html">동네가게</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jobs.html">알바</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">부동산 직거래</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">중고차 직거래</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="offcanvas-toggler offcanvas-search-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-search"></i>
+          </button>
+          <div class="offcanvas offcanvas-top d-md-none" id="offcanvasSearch" role="search">
+            <form class="offcanvas-header" action="">
+              <input class="navbar-search" type="search" placeholder="물품이나 동네를 검색해보세요" aria-label="Search">
+              <button class="close" data-bs-dismiss="offcanvas" aria-label="Close">취소</button>
+            </form>
+            <div class="offcanvas-body">
+              <h3 class="offcanvs-keyword-recommended">추천</h3>
+              <ul class="offcanvas-keyword-group">
+                <li class="offcanvas-keyword">키즈카페</li>
+                <li class="offcanvas-keyword">분당 유모차</li>
+                <li class="offcanvas-keyword">강남 명품가방</li>
+                <li class="offcanvas-keyword">부산 책상</li>
+                <li class="offcanvas-keyword border-0">인천 노트북</li>
+                <li class="offcanvas-keyword border-0">화분</li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-none d-md-flex"> 
+            <form class="collapse navbar-collapse" id="navbarSearchContent"  role="search">
+              <input class="navbar-search" type="search" placeholder="물품이나 동네를 검색해보세요" aria-label="Search">
+            </form>
+            <button class="btn chat d-none d-md-block" type="submit">채팅하기</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <main class="main">
+      <section class="home-first bg-beige">
+        <!-- PC -->
+        <div class="d-none d-md-flex home-first-content">
+          <div class="home-text">
+            <h1 class="home-title">
+              당신 근처의<br>
+              당근마켓
+            </h1>
+            <p class="home-subtext">
+              중고 거래부터 동네 정보까지, 이웃과 함께해요.<br>
+              가깝고 따뜻한 당신의 근처를 만들어요.
+            </p>
+          </div>
+          <div class="home-image-top">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-top-d6869a79bc4cb58ea59aa5a408decfdf4a4ba60ac639837081da12861083cdbb.webp "  alt="중고거래, 동네생활 질문글과 동네가게" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-top-68ba12f0da7b5af9a574ed92ca8b3a9c0068db176b566dd374ee50359693358b.png">
+          </div>
+        </div>
+        <!-- tablet -->
+        <div class="d-md-none home-first-content">
+          <div class="home-text">
+            <h1 class="home-title">
+              당신 근처의<br>
+              당근마켓
+            </h1>
+            <p class="home-subtext">
+              중고 거래부터 동네 정보까지, 이웃과 함께해요.<br>
+              가깝고 따뜻한 당신의 근처를 만들어요.
+            </p>
+          </div>
+          <div class="home-image-top">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/3x/image-top-b1b26d9912bb877a0e724fdc40183467e69b5c7121049e3091599854d7f05eba.webp 3x, https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/2x/image-top-b4ebbadcffa6e88bd3d420cf97049bb78dea0c2c85415ce86f233a1dfc60181c.webp 2x, https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/image-top-2d17cea612b1b4649f6fb021c4d2c8ba571662a05a1b1c4d17dffba293cb0eca.webp 1x" alt="중고거래, 동네생활 질문글과 동네가게" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/image-top-758de6b77b874e0b00151f9ff2cea87efe3dc13b6c24d2eb8cdbe362a4957b93.png">
+          </div>
+        </div>
+      </section>
+
+      <section class="home-mid">
+
+        <div class="d-none d-md-flex home-mid-content">
+          <div class="home-main-image-01">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-1-cc678e9a217b96f5cb459f7f0684f5ba67706f9889801618b8cf879fbc2c0ea7.webp" alt="우리동네 중고 직거래 사진" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-1-39ac203e8922f615aa3843337871cb654b81269e872494128bf08236157c5f6a.png">
+          </div>
+          <div style="min-width: 411px;">
+            <h1 class="home-title">
+              우리 동네<br>
+              중고 직거래 마켓
+            </h1>
+            <p class="home-subtext">
+              동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.
+            </p>
+            <div>
+              <button type="button" class="btn home-button">인기매물 보기</button>
+              <button type="button" class="btn home-button ms-3">믿을 수 있는 중고거래</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column-reverse d-md-none home-mid-content">
+          <div class="home-image-top">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/3x/image-1-f16e2ffbc3a04cb7b321dadaef1de650db6bccc642af65ce214c236855c9077d.webp 3x, https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/2x/image-1-6784b269df8ed4ba5248d168953a2de0459598d241ec29b0ec3b915953047b25.webp 2x, https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/image-1-03230c10135bb9e42bf04dcce1fe76ad75249fdf796f006aada052ab31eab16e.webp 1x" alt="우리동네 중고 직거래 사진" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/mobile/image-1-78cecbae525ff615d0d3994dfd67cff0da7dc56303e27a64ee9a90185700e38b.png">
+          </div>
+          <div class="mb-4">
+            <h1 class="home-title">
+              우리 동네<br>
+              중고 직거래 마켓
+            </h1>
+            <p class="home-subtext">
+              동네 주민들과 가깝고 따뜻한 거래를<br>
+              지금 경험해보세요.
+            </p>
+            <div class="d-grid gap-2">
+              <button type="button" class="btn home-button">인기매물 보기</button>
+              <button type="button" class="btn home-button">믿을 수 있는 중고거래</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-mid bg-green">
+        <!-- PC -->
+        <div class="d-none d-md-flex home-mid-content">
+          <div style="min-width: 360px;">
+            <h1 class="home-title">
+              이웃과 함께 하는<br>
+              동네생활
+            </h1>
+            <p class="home-subtext">
+              우리 동네의 다양한 이야기를 이웃과 함께 나누어요.
+            </p>
+            <div class="home-town">
+              <div class="home-town-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <circle cx="28" cy="28" r="28" fill="#C2E8C2"/>
+                  <path d="M34 41V26.5L23 17.5L12 26.5V41H34Z" fill="white"/>
+                  <path d="M12 26.5V41H34V26.5" stroke="#489F48" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M19 31C19 30.4477 19.4477 30 20 30H26C26.5523 30 27 30.4477 27 31V40H19V31Z" fill="#95D295"/>
+                  <path d="M9 29L23 17L37 29" stroke="#489F48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M48 23C48 28.5228 43.5228 33 38 33C35.9024 33 33.9557 32.3542 32.3478 31.2506C30.6087 31.6957 28.8696 32.1304 28.8696 32.1304C28.8696 32.1304 29.3043 30.3913 29.7391 28.6371C28.6418 27.0321 28 25.091 28 23C28 17.4772 32.4772 13 38 13C43.5228 13 48 17.4772 48 23Z" fill="white" stroke="#489F48" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M37.9875 25.2C37.9875 22.9544 40.726 23.0696 40.975 21.0928C41.2239 19.1159 39.5709 17.9355 37.9875 18.0027C36.4041 18.0699 35 19.2886 35 20.8816" stroke="#489F48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="38.0003" cy="28.0801" r="0.96" fill="#489F48"/>
+                </svg>
+                <p class="fw-bold font-small mb-2 mt-3">우리동네질문</p>
+                <p class="font-xs">궁금한 게 있을 땐 이웃에게 물어보세요.</p>
+              </div>
+              <div class="home-town-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <circle cx="28" cy="28" r="28" fill="#C2E8C2"/>
+                  <path d="M19.902 14H38C39.1046 14 40 14.8954 40 16V42H19C17.8954 42 17 41.1046 17 40V14H15.5234H19.902Z" fill="white" stroke="#489F48" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M21 40C21 41.5 20 42 19 42H40C41 42 42 41.5 42 40.5V39H21V40Z" fill="white" stroke="#489F48" stroke-width="2" stroke-linejoin="round"/>
+                  <rect x="22" y="19" width="14" height="7" rx="1" fill="#95D295"/>
+                  <path d="M23 30L35 30" stroke="#95D295" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23 34H32" stroke="#95D295" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14 16C14 15 14.375 14 15.5 14C16.625 14 17 15 17 16V18H14V16Z" fill="white" stroke="#489F48" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <p class="fw-bold font-small mb-2 mt-3">동네분실센터</p>
+                <p class="font-xs">무언가를 잃어버렸을 때, 함께 찾을 수 있어요.</p>
+              </div>
+              <div class="home-town-item me-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <circle cx="28" cy="28" r="28" fill="#C2E8C2"/>
+                  <path d="M19 29.5C19 36.4036 24.5964 42 31.5 42C34.1219 42 36.5553 41.1927 38.5652 39.8132C40.7391 40.3696 42.913 40.913 42.913 40.913C42.913 40.913 42.3696 38.7391 41.8261 36.5464C43.1978 34.5402 44 32.1138 44 29.5C44 22.5964 38.4036 17 31.5 17C24.5964 17 19 22.5964 19 29.5Z" fill="white" stroke="#489F48" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M37 26.5C37 33.4036 31.4036 39 24.5 39C21.8781 39 19.4447 38.1927 17.4348 36.8132C15.2609 37.3696 13.087 37.913 13.087 37.913C13.087 37.913 13.6304 35.7391 14.1739 33.5464C12.8022 31.5402 12 29.1138 12 26.5C12 19.5964 17.5964 14 24.5 14C31.4036 14 37 19.5964 37 26.5Z" fill="white" stroke="#489F48" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M19 24L30 24" stroke="#95D295" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 29L26 29" stroke="#95D295" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="fw-bold font-small mb-2 mt-3">동네모임</p>
+                <p class="font-xs">관심사가 비슷한 이웃과 온오프라인으로 만나요.</p>
+              </div>
+            </div>
+          </div>
+          <div class="home-main-image-02">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-2-91a2286453bdf82dea16a7f0ee4ceb9dd325eae0e5a2a9967ba72c344bf8f2fc.webp " loading="lazy" alt="이웃과 함께하는 동네생활" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-2-f286322ab98acedf914a05bf77e84c67dcb897c8ccb543e66f6afea9d366d06d.png">
+          </div>
+          
+        </div>
+        <!-- tablet -->
+        <div class="d-flex d-md-none flex-column home-mid-content">
+          <div>
+            <h1 class="home-title">
+              이웃과 함께 하는<br>
+              동네생활
+            </h1>
+            <p>
+              우리 동네의 다양한 이야기를<br>
+              이웃과 함께 나누어요.
+            </p>
+          </div>
+          <div class="home-main-image-02">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-2-91a2286453bdf82dea16a7f0ee4ceb9dd325eae0e5a2a9967ba72c344bf8f2fc.webp" loading="lazy" alt="이웃과 함께하는 동네생활" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-2-f286322ab98acedf914a05bf77e84c67dcb897c8ccb543e66f6afea9d366d06d.png">
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="home-mid">
+        <!-- PC -->
+        <div class="d-none d-md-flex home-mid-content">
+          <div  class="home-main-image-03">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-3-5fd6fb61d603ab919a45566b2ea6b505c83a93ec218f34ddcd5cb482543e2317.webp" loading="lazy" alt="내 근처에서 찾는 동네가게" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-3-0c8b631ac2294ac5a3b3e7a3a5580c3e68a3303ad2aded1e84aa57a2e1442786.png">
+          </div>
+          <div>
+            <h1 class="home-title">
+              내 근처에서 찾는<br>
+              동네가게
+            </h1>
+            <p class="home-subtext">
+              우리 동네 가게를 찾고 있나요?<br>
+              동네 주민이 남긴 진짜 후기를 함께 확인해보세요!
+            </p>
+            <div>
+              <button type="button" class="btn home-button">당근마켓 동네가게 찾기</button>
+            </div>
+          </div>
+        </div>
+        <!-- tablet -->
+        <div class="d-flex flex-column-reverse d-md-none home-mid-content">
+          <div  class="home-main-image-03">
+            <img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-3-5fd6fb61d603ab919a45566b2ea6b505c83a93ec218f34ddcd5cb482543e2317.webp" loading="lazy" alt="내 근처에서 찾는 동네가게" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-3-0c8b631ac2294ac5a3b3e7a3a5580c3e68a3303ad2aded1e84aa57a2e1442786.png">
+          </div>
+          <div class="mb-4">
+            <h1 class="home-title">
+              내 근처에서 찾는<br>
+              동네가게
+            </h1>
+            <p class="home-subtext">
+              우리 동네 가게를 찾고 있나요?<br>
+              동네 주민이 남긴 진짜 후기를 함께 확인해보세요!
+            </p>
+            <div>
+              <button type="button" class="btn home-button">당근마켓 동네가게 찾기</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-mid bg-gray">
+        <div class="home-popular-content">
+          <h1 class="home-popular-title text-center">
+            중고거래 인기매물
+          </h1>
+          <div class="row row-cols-2 row-cols-md-4 justify-content-around mx-2 ms-md-4">
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" alt="시골집 팝니다" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/d533be8be038162650c7d8954974976a6053370b5fb663aabfdb7319a52b5a19.webp?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">시골집 팝니다</h5>
+                  <p class="card-price fw-bold">3000만원</p>
+                  <p class="card-location font-xs">경북 포항시 북구 두호동</p>
+                  <div class="card-number font-xs">
+                    <span>관심 135</span>
+                    <span>·</span>
+                    <span>채팅 100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" alt="전자렌지" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/1562a03a547a6c4d909cd5105db87494984ed9fca3bd022b74caffb813c1cee9.webp?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">전자렌지</h5>
+                  <p class="card-price fw-bold">10,000원</p>
+                  <p class="card-location font-xs">경남 창원시 성산구 대원동</p>
+                  <div class="card-number font-xs">
+                    <span>관심 31</span>
+                    <span>·</span>
+                    <span>채팅 73</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" alt="(이사정리) 삼성 건조기(9kg)" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/e62cf90d9872ab6bbbadfd1b9664ece3d4b8e23b71fd003f9d7024bf60dc2b76.webp?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">(이사정리) 삼성 건조기(9kg)</h5>
+                  <p class="card-price fw-bold">50,000원</p>
+                  <p class="card-location font-xs">제주 서귀포시 대정읍</p>
+                  <div class="card-number font-xs">
+                    <span>관심 24</span>
+                    <span>·</span>
+                    <span>채팅 70</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" style="margin-right: 0;">
+              <div class="card">
+                <img class="card-img-top" alt="전자레인지" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/755ED484DA988E81BF60E98528536194A7B94825CE3665CC037B79B430B016CD.jpg?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">전자레인지</h5>
+                  <p class="card-price fw-bold">5,000원</p>
+                  <p class="card-location font-xs">서울 성북구 상월곡동</p>
+                  <div class="card-number font-xs">
+                    <span>관심 11</span>
+                    <span>·</span>
+                    <span>채팅 54</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" alt="7년사용 lg전자레인지" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/9f261913c2a7eb2c9cfce2f1e05ce579b368e9edf4be4c0b48449df1cb780067.webp?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">7년사용 lg전자레인지</h5>
+                  <p class="card-price fw-bold">1,000원</p>
+                  <p class="card-location font-xs">서울 양천구 신정1동</p>
+                  <div class="card-number font-xs">
+                    <span>관심 16</span>
+                    <span>·</span>
+                    <span>채팅 45</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" alt="애플워치" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/35f51f3ef4aab753c77ba08cc01be441ef0eb739af26d360d91135b0b03fcd45.jpg?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">애플워치</h5>
+                  <p class="card-price fw-bold">4,500원</p>
+                  <p class="card-location font-xs">경남 거제시 상문동</p>
+                  <div class="card-number font-xs">
+                    <span>관심 4</span>
+                    <span>·</span>
+                    <span>채팅 47</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img class="card-img-top" alt="셀로랑 블랙 핸드백 팔아용" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/F68D59888AC6E5778902EBEEB9371476EDFCBFF9ADEE4E26DD0FD2A271AAE69F.jpg?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">셀로랑 블랙 핸드백 팔아용</h5>
+                  <p class="card-price fw-bold">400,000원</p>
+                  <p class="card-location font-xs">서울 강남구 삼성2동</p>
+                  <div class="card-number font-xs">
+                    <span>관심 111</span>
+                    <span>·</span>
+                    <span>채팅 56</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4" style="margin-right: 0;">
+              <div class="card">
+                <img class="card-img-top" alt="노트20울트라5G" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/3eec12a1295dd052102e4e174e3968ecef9ee38dd0eafbb3d54c39abc5d24623.webp?q=82&amp;s=300x300&amp;t=crop">
+                <div class="card-body">
+                  <h5 class="card-title">노트20울트라5G</h5>
+                  <p class="card-price fw-bold">320,000원</p>
+                  <p class="card-location font-xs">서울 구로구 구로제1동</p>
+                  <div class="card-number font-xs">
+                    <span>관심 22</span>
+                    <span>·</span>
+                    <span>채팅 32</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center fw-bold">
+            <a class="text-dark" href="https://www.daangn.com/hot_articles">인기매물 더 보기</a>
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+      <section class="home-topic">
+        <div class="text-center fw-bold mb-4 mb-md-1">
+          <a href="https://www.daangn.com/hot_articles">중고거래 인기검색어</a>
+        </div>
+        <ul class="home-topic-list">
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">자전거</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">의자</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">아이폰</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">냉장고</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">노트북</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">패딩</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">아이패드</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">모니터</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">스타벅스</a>
+          </li>
+          <li class="home-topic-item">
+            <a class="home-topic-link" href="">책상</a>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+    
+    <footer class="home-footer">
+      <div class="footer-content">
+        <section class="footer-top">
+          <div class="footer-list-group d-flex">
+            <ul class="footer-list">
+              <li class="footer-item font-small"><a class="home-topic-link" href="">중고거래</a></li>
+              <li class="footer-item font-small"><a class="home-topic-link" href="">동네가게</a></li>
+              <li class="footer-item font-small"><a class="home-topic-link" href="">당근알바</a></li>
+              <li class="footer-item font-small"><a class="home-topic-link" href="">부동산 직거래</a></li>
+              <li class="footer-item font-small"><a class="home-topic-link" href="">중고차 직거래</a></li>
+            </ul>
+            <ul class="footer-list">
+              <li class="footer-item font-small"><a class="home-topic-link" href="">당근비지니스</a></li>
+              <li class="footer-item font-small"><a class="home-topic-link" href="">채팅하기</a></li>
+            </ul>
+            <ul class="footer-list me-5 me-md-0">
+              <li class="footer-item font-small"><a class="home-topic-link" href="">자주 묻는 질문</a></li>
+              <li class="footer-item font-small"><a class="home-topic-link" href="">회사 소개</a></li>
+              <li class="footer-item font-small"><a class="home-topic-link" href="">인재 채용</a></li>
+            </ul>
+          </div>
+          <!-- PC -->
+          <div class="d-none d-md-block">
+            <p class="fw-bold font-small">당근 마켓 앱 다운로드</p>
+            <div class="footer-button-group">
+              <button type="button" class="btn footer-button"><i class="bi bi-apple me-1 fs-5"></i><span class="font-small">App Store</span></button>
+              <button type="button" class="btn footer-button ms-2"><i class="bi bi-google-play me-1 fs-5"></i><span class="font-small">Google Play</span></button>
+            </div>
+          </div>
+          <!-- tablet -->
+          <div class="d-flex d-md-none">
+            <span class="fw-bold font-small">당근 마켓 앱 다운로드</span>
+            <span class="fw-bold font-small"><a class="footer-app" href="">iOS<i class="ms-2 bi bi-arrow-up-right"></i></a></span>
+            <span class="fw-bold font-small"><a class="footer-app" href="">Android<i class="ms-2 bi bi-arrow-up-right"></i></a></span>
+            
+          </div>
+        </section>
+        <section class="footer-bottom flex-column flex-md-row">
+          <div class="color-gray">
+            <div class="footer-info">
+              <div>
+                <span class="font-xs"><span class="fw-bold">대표</span> 김용현, 황도연</span>
+                <span></span>
+                <span class="font-xs"><span class="fw-bold">사업자번호</span> 375-87-00088</span>
+              </div>
+              <div>
+                <span class="font-xs"><span class="fw-bold">직업정보제공사업 신고번호</span> 2016-서울서초-0051</span>
+              </div>
+              <div>
+                <span class="font-xs"><span class="fw-bold">주소</span> 서울특별시 구로구 디지털로 30길 28, 609호 (당근서비스)</span>
+              </div>
+              <div>
+                <span class="font-xs"><span class="fw-bold">전화</span> 1544-9796</span>
+                <span></span>
+                <span class="font-xs"><span class="fw-bold">고객문의</span> cs@daangnservice.com</span>
+              </div>
+            </div>
+            <div class="footer-info fw-bold">
+              <a class="footer-link font-xs color-gray" href="">제휴 문의</a>
+              <a class="footer-link font-xs color-gray" href="">광고 문의</a>
+              <a class="footer-link font-xs color-gray" href="">PR 문의</a>
+              <a class="footer-link font-xs color-gray" href="">IR 문의</a>
+            </div>
+            <div class="fw-bold">
+              <a class="footer-link font-xs color-gray" href="">이용약관</a>
+              <a class="footer-link font-xs" style="color: #4d5159;" href="">개인정보처리방침</a>
+              <a class="footer-link font-xs color-gray" href="">위치기반서비스 이용약관</a>
+              <a class="footer-link font-xs color-gray" href="">이용자보호 비전과 계획</a>
+            </div>
+          </div>
+          <div class="footer-sns align-items-center mt-4 mt-md-0">
+            <a href=""><i class="bi bi-facebook color-gray"></i><a>
+            <a href=""><i class="bi bi-instagram color-gray"></i><a>
+            <a href=""><i class="bi bi-youtube color-gray"></i><a>
+            <a class="bi" href=""><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1492_32254)"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.86619 3H21.6338C23.0736 3 24.2515 4.17222 24.25 5.60362V16.1668C24.25 17.5982 23.0736 18.7704 21.6338 18.7704H14.2351C14.2351 18.7704 12.6961 22.6376 12.1768 22.6376C11.6588 22.6376 10.2353 18.7704 10.2353 18.7704H2.86619C1.42788 18.7704 0.25 17.5982 0.25 16.1668V5.60362C0.25 4.17222 1.42788 3 2.86619 3ZM5.66291 13.3438C6.2844 13.3438 6.85411 13.1685 7.22552 12.7518C7.59842 12.335 7.78191 11.9404 7.78191 11.2512C7.78191 10.6179 7.54959 10.0451 7.23292 9.67987C6.91477 9.31318 6.38355 8.99509 5.87303 9.01276C5.2767 9.03191 4.77062 9.14236 4.38885 9.46633H4.37109V7.12779H2.96237V13.2436H4.37109V12.9462H4.38885C4.6922 13.1759 5.10209 13.3438 5.66291 13.3438ZM8.81329 13.2893H10.2501V9.55175C10.1332 7.12337 8.11929 7.00115 8.11929 7.00115V8.51649C8.11929 8.51649 8.81329 8.63135 8.81329 9.50462V13.2893ZM15.3612 12.8622C15.5935 12.6472 15.7681 12.4028 15.8894 12.1289C16.0093 11.8564 16.0685 11.5663 16.0714 11.2585C16.0714 10.9507 16.0108 10.6606 15.8909 10.3867C15.7696 10.1128 15.595 9.86836 15.3626 9.65336C15.1333 9.4413 14.8714 9.27784 14.5754 9.16444C14.278 9.05105 13.9658 8.99509 13.6358 8.99509C13.3117 8.99509 13.0039 9.05105 12.7109 9.16444C12.4179 9.27784 12.156 9.43983 11.9237 9.65336C11.6855 9.8772 11.5064 10.1246 11.3836 10.3956C11.2608 10.6665 11.2001 10.9552 11.2001 11.2585C11.2001 11.5619 11.2608 11.8505 11.3821 12.12C11.5049 12.391 11.684 12.6384 11.9222 12.8622C12.1531 13.0743 12.415 13.2378 12.7095 13.3511C13.0024 13.4645 13.3102 13.522 13.6343 13.522C13.9643 13.522 14.278 13.4645 14.5739 13.3511C14.8714 13.2378 15.1333 13.0743 15.3612 12.8622ZM20.8525 14.921C21.3349 14.4659 21.5391 13.8106 21.5391 12.7371V9.0378H20.1393V9.37503H20.1215C19.7812 9.06578 19.4334 8.93324 18.88 8.93324C18.2629 8.93324 17.7228 9.13794 17.3455 9.57678C16.9667 10.0142 16.7773 10.6076 16.7773 11.3528C16.7773 12.0184 16.946 12.5486 17.2863 12.9447C17.6252 13.3408 18.1268 13.5529 18.7054 13.5529C19.3298 13.5529 19.7989 13.3924 20.12 12.9506H20.1378V13.2348C20.1393 13.9741 19.3506 14.3496 18.7779 14.2922V15.4025C19.4645 15.4997 20.2798 15.4614 20.8525 14.921ZM12.9462 10.5489C13.1356 10.356 13.365 10.2603 13.6328 10.2603C13.9051 10.2603 14.1374 10.356 14.3313 10.5489C14.5251 10.7418 14.6213 10.976 14.6213 11.2499C14.6213 11.5238 14.5251 11.7579 14.3313 11.9508C14.1374 12.1423 13.9051 12.2395 13.6328 12.2395C13.365 12.2395 13.1356 12.1438 12.9462 11.9508C12.7568 11.7579 12.6606 11.5252 12.6606 11.2499C12.6606 10.976 12.7553 10.7418 12.9462 10.5489ZM4.64057 10.5577C4.82998 10.3662 5.05934 10.269 5.32717 10.269C5.59945 10.269 5.83177 10.3648 6.02561 10.5577C6.21946 10.7506 6.31564 10.9847 6.31564 11.2587C6.31564 11.534 6.21946 11.7667 6.02561 11.9596C5.83177 12.1525 5.59945 12.2497 5.32717 12.2497C5.05934 12.2497 4.83146 12.1525 4.64057 11.9596C4.44968 11.7667 4.35498 11.5326 4.35498 11.2587C4.35498 10.9847 4.44968 10.7506 4.64057 10.5577ZM19.1714 10.269C18.9036 10.269 18.6742 10.3662 18.4833 10.5577C18.2939 10.7506 18.1978 10.9847 18.1978 11.2587C18.1978 11.5326 18.2939 11.7667 18.4833 11.9596C18.6742 12.1525 18.9036 12.2497 19.1714 12.2497C19.4422 12.2497 19.676 12.1525 19.8699 11.9596C20.0637 11.7667 20.1599 11.534 20.1599 11.2587C20.1599 10.9847 20.0622 10.7506 19.8699 10.5577C19.676 10.3648 19.4437 10.269 19.1714 10.269Z" fill="#868B94"></path></g><defs><clipPath id="clip0_1492_32254"><rect width="24" height="24" fill="white" transform="translate(0.25)"></rect></clipPath></defs></svg><a>
+            <div class="footer-dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="color-gray font-xs bi-globe2"></i> <span class="font-xs color-gray">한국</span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-karrot-ui-icon="true" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.93427 7.43427C3.24669 7.12185 3.75322 7.12185 4.06564 7.43427L12 15.3686L19.9343 7.43427C20.2467 7.12185 20.7532 7.12185 21.0656 7.43427C21.3781 7.74669 21.3781 8.25322 21.0656 8.56564L12.5656 17.0656C12.2532 17.3781 11.7467 17.3781 11.4343 17.0656L2.93427 8.56564C2.62185 8.25322 2.62185 7.74669 2.93427 7.43427Z" fill="#868B94"></path></svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">영국</a></li>
+                <li><a class="dropdown-item" href="#">캐나다</a></li>
+                <li><a class="dropdown-item" href="#">미국</a></li>
+                <li><a class="dropdown-item" href="#">일본</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
