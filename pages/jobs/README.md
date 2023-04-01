@@ -4,4 +4,8 @@
 <hr>
 
 ### PC
-![jobs_pc](/img/jobs_pc.png)
+![jobs for pc](/img/jobs_pc.png)
+### tablet
+![jobs for tablet](/img/jobs_tablet.png)
+### PC
+![jobs for mobile](/img/jobs_mobile.png)
