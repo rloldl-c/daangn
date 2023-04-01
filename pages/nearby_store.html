@@ -53,7 +53,7 @@
               </ul>
             </div>
           </div>
-          <button class="offcanvas-toggler offcanvas-search-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="offcanvas-toggler" id="offcanvas-search-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-search"></i>
           </button>
           <div class="offcanvas offcanvas-top d-md-none" id="offcanvasSearch" role="search">
@@ -100,268 +100,1482 @@
         <section class="ns-mid">
           <h2 class="ns-title">다양한 동네가게를 볼 수 있어요</h2>
           <div class="scroll-x">
-            <ul class="ns-mid-group">
-              <li>
-                <button class="ns-mid-button active">전체</button>
+            <ul class="ns-mid-group mb-3" id="pills-tab" role="tablist">
+              <li role="presentation">
+                <button class="ns-mid-button active" id="button-all-tab" data-bs-toggle="pill" data-bs-target="#button-all" type="button" role="tab" aria-controls="button-all" aria-selected="true">전체</button>
               </li>
-              <li>
-                <button class="ns-mid-button">식당</button>
+              <li role="presentation">
+                <button class="ns-mid-button" id="button-restaurant-tab" data-bs-toggle="pill" data-bs-target="#button-restaurant" type="button" role="tab" aria-controls="button-restaurant" aria-selected="false">식당</button>
               </li>
-              <li>
-                <button class="ns-mid-button">카페</button>
+              <li role="presentation">
+                <button class="ns-mid-button" id="button-cafe-tab" data-bs-toggle="pill" data-bs-target="#button-cafe" type="button" role="tab" aria-controls="button-cafe" aria-selected="false">카페</button>
               </li>
-              <li>
-                <button class="ns-mid-button">용달/이사</button>
+              <li role="presentation">
+                <button class="ns-mid-button" id="button-move-tab" data-bs-toggle="pill" data-bs-target="#button-move" type="button" role="tab" aria-controls="button-move" aria-selected="false">용달/이사</button>
               </li>
-              <li>
-                <button class="ns-mid-button">뷰티/미용</button>
+              <li role="presentation">
+                <button class="ns-mid-button" id="button-beauty-tab" data-bs-toggle="pill" data-bs-target="#button-beauty" type="button" role="tab" aria-controls="button-beauty" aria-selected="false">뷰티/미용</button>
               </li>
-              <li>
-                <button class="ns-mid-button">헬스/필라테스/요가</button>
+              <li role="presentation">
+                <button class="ns-mid-button" id="button-health-tab" data-bs-toggle="pill" data-bs-target="#button-health" type="button" role="tab" aria-controls="button-health" aria-selected="false">헬스/필라테스/요가</button>
               </li>
             </ul>
           </div>
 
-          <div class="ns-store">
-            <div class="ns-store-item md-bb me-md-5">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/50472096/1639685484756/16c5996beb2c0bc90ebdde18b6095516ad067e0f57a06197b2b4228a9cfc7ac9.jpeg?q=82&amp;s=640x640&amp;t=crop"   class="thumbnail-image" >
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">임은하푸드 인천창고</span>
-                    <span class="font-small color-gray">천곡동</span>
-                  </div>
-                  <span class="ns-store-info">임은하푸드는 전국에 수산물 창고를 둔 곳입니다.
-                    매일 아침 창고 소식을 전해요.
-                    단골맺기를 하시면 소식 알람이 간답니다.
-                    
-                    꼭 저희에게 구매하지 않더라도,
-                    시장가시기 전에 그 날 시세 보시면 좋을 거에요.
-                    
-                    간혹, 물건 위탁으로 보내는 유통회사 아니냐 하시는데.
-                    절대 아니고요.
-                    동해, 부산, 인천, 군산, 포항 등.
-                    바다가가 있는 곳에 왠만하면 창고가 있는 큰 회사 입니다.
-                    매일 새벽 어판장에서 위판을 받고, 배떼기를 한답니다.
-                    당연 매일 가격이 다르고요.
-                    
-                    사람이 하는 일이라 클레임이 나올 수 있어요.
-                    포장하는 누가 실수 할 수도 있고,
-                    선별하는 누가 실수 할 수도 있고,
-                    발주받는 누가 실수 할 수도 있고,
-                    택배기사님이 실수 할 수도 있고,
-                    누군가의 자식, 누군가의 동생, 누군가의 아버지들입니다.
-                    
-                    좋게 이야기 해 주시면 대부분 해결이 돼요.
-                    물건에 문제가 있을 경우 연락 주세요.
-                    문제가 생길 수 있다는 점을 인지하고 더 노력 하겠습니다.
-                    문제가 생기지 않게 더 노력 하겠습니다.
-                    
-                    오늘도 힘찬 뱃고동 소리와 함께 시작 하겠습니다.
-                    감사합니다. - 임은하푸드 일동
-                  </span>
-                  <span class="font-xs color-gray">후기 1,716 · 단골 26,503 · 수산물</span>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="button-all" role="tabpanel" aria-labelledby="button-all-tab" tabindex="0">
+              <div class="ns-store">
+                <div class="ns-store-item md-bb me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/50472096/1639685484756/16c5996beb2c0bc90ebdde18b6095516ad067e0f57a06197b2b4228a9cfc7ac9.jpeg?q=82&amp;s=640x640&amp;t=crop"   class="thumbnail-image" >
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">임은하푸드 인천창고</span>
+                        <span class="ns-store-place">천곡동</span>
+                      </div>
+                      <span class="ns-store-info">임은하푸드는 전국에 수산물 창고를 둔 곳입니다.
+                        매일 아침 창고 소식을 전해요.
+                        단골맺기를 하시면 소식 알람이 간답니다.
+                        
+                        꼭 저희에게 구매하지 않더라도,
+                        시장가시기 전에 그 날 시세 보시면 좋을 거에요.
+                        
+                        간혹, 물건 위탁으로 보내는 유통회사 아니냐 하시는데.
+                        절대 아니고요.
+                        동해, 부산, 인천, 군산, 포항 등.
+                        바다가가 있는 곳에 왠만하면 창고가 있는 큰 회사 입니다.
+                        매일 새벽 어판장에서 위판을 받고, 배떼기를 한답니다.
+                        당연 매일 가격이 다르고요.
+                        
+                        사람이 하는 일이라 클레임이 나올 수 있어요.
+                        포장하는 누가 실수 할 수도 있고,
+                        선별하는 누가 실수 할 수도 있고,
+                        발주받는 누가 실수 할 수도 있고,
+                        택배기사님이 실수 할 수도 있고,
+                        누군가의 자식, 누군가의 동생, 누군가의 아버지들입니다.
+                        
+                        좋게 이야기 해 주시면 대부분 해결이 돼요.
+                        물건에 문제가 있을 경우 연락 주세요.
+                        문제가 생길 수 있다는 점을 인지하고 더 노력 하겠습니다.
+                        문제가 생기지 않게 더 노력 하겠습니다.
+                        
+                        오늘도 힘찬 뱃고동 소리와 함께 시작 하겠습니다.
+                        감사합니다. - 임은하푸드 일동
+                      </span>
+                      <span class="ns-store-review">후기 1,716 · 단골 26,503 · 수산물</span>
+                    </div>
+                  </a>
                 </div>
-              </a>
+                <div class="ns-store-item flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/17969333/1648446564196/4eb8d7c682d7d31440333a7a5f4f1895721eee1b32e06993d625d9f669800d86.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">갑을농수산</span>
+                        <span class="ns-store-place">천곡동</span>
+                      </div>
+                      <span class="ns-store-info">안녕하세요!
+        
+                        새벽에 수산물을 받아와 도매가로 드리는 갑을농수산입니다.
+                        
+                        전국 7개 지점에 창고를 두고 있고 이는 산지의 신선함을 그대로 배송하기 위함입니다.
+                        
+                        새로운 고객, 아니! 새로운 가족분들을 위함에 돈을 아끼지 않습니다.
+                        마구 마구 저렴하게 드릴 테니 필요한 상품 있으시면 언제든 문의주세요!
+                      </span>
+                      <span class="ns-store-review">후기 1,580 · 단골 22,310 · 식자재판매</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/21709505/1653454688660/ZjZmYTViYWMzMWRkMjhlNjg0NGIxOGRhM2UzOGNiMDBlNTY1ZThmOWRkYTYyMTFiZDA0MzhjMGY2NzI3N2M1NC5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">찐신선 정육점</span>
+                        <span class="ns-store-place">팔탄면</span>
+                      </div>
+                      <span class="ns-store-info">세계적인 육류 선두 기업들로부터 직수입하여 
+                        유통마진없이 최종소비자에게 배송해드리는 
+                        찐신선 온라인정육점 입니다.😄
+                        
+                        매주 다양한 고기부위 할인소식받으시고
+                        "좋은고기" "좋은가격"에 드세요🥰
+                        
+                        "찐신선" 을 검색해보세요.
+                        www.jjinsinsun.com
+                        
+                        평일 낮12시 이전 주문 시 다음날 받아요.😊
+                        서울 및 수도권 대부분 지역 새벽배송돼요.😄
+                        4만원 이상 주문시 무료배송 이에요😊
+                        
+                        카카오채널
+                        https://pf.kakao.com/_XAKDxb
+                        
+                        찐신선 어플도 있습니다!
+                        
+                        많은관심 바랍니다♡
+                      </span>
+                      <span class="ns-store-review">후기 675 · 단골 21,856 · 정육점</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/businessPlatform/bizPlatform/profile/center_biz_3568585/1669188796548/f0640532c68de863ea734e2349ff0379a759e345ffd71b1fe68ba22108914459.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">식품명가 파란거북</span>
+                        <span class="ns-store-place">만촌동</span>
+                      </div>
+                      <span class="ns-store-info">[지역회사가 아닌 산지직발송 원청업체입니다.]
+        
+                        식품 명가 파란거북.
+                        거북은 예로부터 신뢰와 신의를 상징한다 했습니다.
+                        신뢰, 신의. 품질. 돈보다 중요한 가치들이 명가를 만듭니다.
+                        
+                        좋은 상품으로 말하겠습니다.
+                      </span>
+                      <span class="ns-store-review">후기 1,178 · 단골 21,315 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/50095049/1638929787569/978227fd2caa69a520f7169a35af8a740319cfa5896a8173b08f12044632c757.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">거저주는 거저몰</span>
+                        <span class="ns-store-place">등촌동</span>
+                      </div>
+                      <span class="ns-store-info">최저가 농•축•수산물 쇼핑몰입니다.
+                        제조사와 소비자 사이의 유통단계를 축소시켜 건강한 식품을 합리적인 가격으로 소개합니다.
+                        ※경매 소식 받는 건 공짜에요!!※
+                        ⠀
+                        ▼ 1:1 카카오톡 주문/문의 ▼
+                      </span>
+                      <span class="ns-store-review">후기 1,365 · 단골 20,276 · 식육판매업</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/59321401/1654655330999/ZTI4NGI3NjdmZTU5YzJiNDVlY2YxMmE2ZTdhN2Y3ZWQ1ZDU5ODMzMDgzZDdmY2Q1ZTUzOTA0NmMyZWNiY2VmNy5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">팔팔키친</span>
+                        <span class="ns-store-place">통진읍</span>
+                      </div>
+                      <span class="ns-store-info">주말 및 공휴일은 답변이 조금 늦어도 양해해주시고 채팅으로 남겨주세요!!
+        
+                        또한 매장이 아닌 창고라 말씀 안주시고 찾아오시는 건 삼가주시면 감사하겠습니다!
+                        
+                        저희는 김포에 축산 및 수입륙 창고, 하남 가공식품 창고, 부산 식품 및 oem 창고, 대구에 축산지점 운영하고 있는 팔팔키친입니다^^
+                        
+                        당근마켓에 싸고 저렴하지만 만족감 높은 고기 드리고싶어서 출사표 던져봅니다
+                        
+                        항상 상품에 문제가 있다면 사진만 상세히 찍어 문의주세요.
+                        
+                        구매문의는 전화보단 톡으로 남겨주세요!
+                        
+                        감사합니다!!
+                      </span>
+                      <span class="ns-store-review">후기 1,466 · 단골 17,758 · 식육판매업</span>
+                    </div>
+                  </a>  
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/26101884/1667193649988/Yzg0M2MyOTMxZDkwNWRjYTM1YzQ1MjMzODM3ZWU2MTVmNjhmMzc4Y2MzNTc5MzdlZDIxODM1OTA0MzI0MWM3Mi5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">렌탈24</span>
+                        <span class="ns-store-place">장기동</span>
+                      </div>
+                      <span class="ns-store-info">후기만 600개 성지 [렌탈24] 입니다❤️
+        
+                        정수기/공청기/비데 등 렌탈 온라인 공식 접수처입니다!
+                        혜택 설치 당일 지급/업계 최고 혜택 약속드립니다!
+                        렌탈료는 최저로, 혜택은 최대로!
+                        전국 가장 빠른 다음날 설치약속드립니다!
+                        언제든지 문의주세요!!
+                        
+                        1800-8938
+                      </span>
+                      <span class="ns-store-review">후기 629 · 단골 17,461 · 정수기판매</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt md-bb flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/businessPlatform/bizPlatform/profile/center_biz_3297562/1667283386776/b926e1715c9b26523a4c17b940ad5f29d96838acfa61f6621bbccb5829514ae0.png?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">제주농협</span>
+                        <span class="ns-store-place">삼도1동</span>
+                      </div>
+                      <span class="ns-store-info">부득이 채팅 답변이 어렵습니다. 문의사항은 서비스 센터로 부탁드립니다! 
+                        ☎️ 070-4471-0231 
+                        
+                        제주도내 19개 지역농협의 농산물을 판매하는 통합마케팅 조직입니다. 
+                      </span>
+                      <span class="ns-store-review">후기 2,069 · 단골 15,508 · 유기농식품판매</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt d-none d-md-block me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/59615634/1655340335580/ODllOTRlNDZkOWZlMTJhY2ZiM2E3NzBmMGQyNGMwZjBjODgzMGNmZTY0MGFmZDRlOWY2ZGM1YmYzYjEzY2EyOS5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">물고기와 육고기</span>
+                        <span class="ns-store-place">소룡동</span>
+                      </div>
+                      <span class="ns-store-info">좋은데 저렴한 상품은 없습니다.
+                        가격의 합당함.
+                        거품 없는 합당한 가격에 드릴게요!
+                      </span>
+                      <span class="ns-store-review">후기 1,233 · 단골 15,083 · 식자재판매</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt d-none d-md-block flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/31657420/1678103289195/NzBhN2U2NGZhN2RlOTlmYjM2YmYxODcxZjBhYjQ5ZGMzNzU3MWNhNmMzM2FlOTA0NTE3YjM0N2FjNjY1NDhiNC5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">임은하푸드 인천창고</span>
+                        <span class="ns-store-place">오천읍</span>
+                      </div>
+                      <span class="ns-store-info">
+                        안녕하세요 ~~^^ 
+                        저는 전국 8곳 창고를 운영중입니다 .
+                        매일 새벽 위판경매를 보고 직접수매 및 택배작업을 합니다
+        
+                        상품이 별로거나 기대이하였다면,
+                        속상해 마시고 꼭 말씀주세요.
+        
+                        제가 부재면 사진 여러장 꼭 찍어주세요.
+        
+                        마지막까지 책임지겠습니다.
+                      </span>
+                      <span class="ns-store-review">후기 1,343 · 단골 14,884 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+        
+              </div>
             </div>
-            <div class="ns-store-item flex-md-grow-1">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/17969333/1648446564196/4eb8d7c682d7d31440333a7a5f4f1895721eee1b32e06993d625d9f669800d86.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">갑을농수산</span>
-                    <span class="font-small color-gray">천곡동</span>
-                  </div>
-                  <span class="ns-store-info">안녕하세요!
+            <div class="tab-pane fade" id="button-restaurant" role="tabpanel" aria-labelledby="button-restaurant-tab" tabindex="0">
+              <div class="ns-store">
+                <div class="ns-store-item md-bb me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/50472096/1639685484756/16c5996beb2c0bc90ebdde18b6095516ad067e0f57a06197b2b4228a9cfc7ac9.jpeg?q=82&amp;s=640x640&amp;t=crop"   class="thumbnail-image" >
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">임은하푸드 인천창고</span>
+                        <span class="ns-store-place">천곡동</span>
+                      </div>
+                      <span class="ns-store-info">임은하푸드는 전국에 수산물 창고를 둔 곳입니다.
+                        매일 아침 창고 소식을 전해요.
+                        단골맺기를 하시면 소식 알람이 간답니다.
+                        
+                        꼭 저희에게 구매하지 않더라도,
+                        시장가시기 전에 그 날 시세 보시면 좋을 거에요.
+                        
+                        간혹, 물건 위탁으로 보내는 유통회사 아니냐 하시는데.
+                        절대 아니고요.
+                        동해, 부산, 인천, 군산, 포항 등.
+                        바다가가 있는 곳에 왠만하면 창고가 있는 큰 회사 입니다.
+                        매일 새벽 어판장에서 위판을 받고, 배떼기를 한답니다.
+                        당연 매일 가격이 다르고요.
+                        
+                        사람이 하는 일이라 클레임이 나올 수 있어요.
+                        포장하는 누가 실수 할 수도 있고,
+                        선별하는 누가 실수 할 수도 있고,
+                        발주받는 누가 실수 할 수도 있고,
+                        택배기사님이 실수 할 수도 있고,
+                        누군가의 자식, 누군가의 동생, 누군가의 아버지들입니다.
+                        
+                        좋게 이야기 해 주시면 대부분 해결이 돼요.
+                        물건에 문제가 있을 경우 연락 주세요.
+                        문제가 생길 수 있다는 점을 인지하고 더 노력 하겠습니다.
+                        문제가 생기지 않게 더 노력 하겠습니다.
+                        
+                        오늘도 힘찬 뱃고동 소리와 함께 시작 하겠습니다.
+                        감사합니다. - 임은하푸드 일동
+                      </span>
+                      <span class="font-xs color-gray">후기 1,716 · 단골 26,503 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/businessPlatform/bizPlatform/profile/center_biz_3568585/1669188796548/f0640532c68de863ea734e2349ff0379a759e345ffd71b1fe68ba22108914459.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">식품명가 파란거북</span>
+                        <span class="ns-store-place">만촌동</span>
+                      </div>
+                      <span class="ns-store-info">[지역회사가 아닌 산지직발송 원청업체입니다.]
+        
+                        식품 명가 파란거북.
+                        거북은 예로부터 신뢰와 신의를 상징한다 했습니다.
+                        신뢰, 신의. 품질. 돈보다 중요한 가치들이 명가를 만듭니다.
+                        
+                        좋은 상품으로 말하겠습니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 1,178 · 단골 21,315 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/31657420/1678103289195/NzBhN2U2NGZhN2RlOTlmYjM2YmYxODcxZjBhYjQ5ZGMzNzU3MWNhNmMzM2FlOTA0NTE3YjM0N2FjNjY1NDhiNC5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">주방홀릭</span>
+                        <span class="ns-store-place">오천읍</span>
+                      </div>
+                      <span class="ns-store-info">
+                        안녕하세요 ~~^^ 
+                        저는 전국 8곳 창고를 운영중입니다 .
+                        매일 새벽 위판경매를 보고 직접수매 및 택배작업을 합니다
+        
+                        상품이 별로거나 기대이하였다면,
+                        속상해 마시고 꼭 말씀주세요.
+        
+                        제가 부재면 사진 여러장 꼭 찍어주세요.
+        
+                        마지막까지 책임지겠습니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 1,343 · 단골 14,884 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/57582287/1650809858473/676ed7c2c6e0b675c51eecfa8b5dc954bb4235ced59f754d0f120243330af9e7.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">수짱푸드</span>
+                        <span class="ns-store-place">신정동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        수산물 짱 수짱푸드에요.
+                        동해/서해/남해 창고를 운영하고 있어요.
+                        
+                        매일 새벽 경매 받은 물건을 보내드립니다.
+                        당일 경매 당일 판매해요.
+                        
+                        긴말 설명하지 않을게요.
+                        보여드릴게요.
+                        
+                        좋은 상품 좋은 가격 증명할게요.
+                        
+                        믿지 말아 주세요. 
+                        항상 의심해 주세요.
+                        
+                        다 증명하겠습니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 1,199 · 단골 9,931 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/59144538/1654653317099/MGIzNjNlMDJmMDI2YzE3YWRkOTdiMmNmODgyYTY5ZjE2YThjYWZiOTEyOWMyY2E5YmU4M2Q3ZjA3NTUzMWI2ZC5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">빅푸드</span>
+                        <span class="ns-store-place">백현동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        안녕하세요 제철생물 빅푸드입니다.
+    
+                        전국 각지에 9개 창고를 직접 운영합니다!
+                        
+                        매일 각지의 신선한 제철 수산물을
+                        직접 수매하여 택배로 보내드립니다.
+                        중간 상인이 없으니 저렴할 수 밖에 없죠.
+                        
+                        택배로 받아보시는게 불안하세요?
+                        걱정하지마세요! 지난 몇년동안에
+                        수천건의 주문을 택배로 직접 보내드렸습니다.
+                        잘 하지 못했다면 지금의 빅푸드는 없었겠죠.
+                        그래서 더 자신 있게 소개드립니다.
+                        
+                        혹 받아보신 상품이 기대에 미치지 않았다면
+                        사진과 함께 꼭 연락 부탁드리겠습니다.
+                        
+                        언제나 우리 단골분들의 소중한 한 말씀
+                        저에게는 크나큰 발전의 기회가 됩니다.
+                        감사합니다.
+                        
+                        - 빅푸드
+                      </span>
+                      <span class="font-xs color-gray">후기 833 · 단골 11,195 · 식육판매업</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/56229330/1648484611334/8d3c86ab02915756a5332e98051aec3e3bb1c9a189964aa26360f53e944a9e4c.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">맛짱푸드</span>
+                        <span class="ns-store-place">소룡동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        [전국 7개 창고 있는 도매 회사예요 ^^; 그래서 싸요! 단골 맺으면 특가 소식 받으실 수 있어요. 
+                        택배로 발송 하고욥. 주말 빼고는 주문주신 다음날 도착해요!]
+                        
+                        수산물 소매로 시작하여 식자재 도매로 이어진 지 십여 년이 넘었습니다.
+                        무언가의 점문가가 되려면 1만 시간이 필요하다는데, 맛짱푸드는 더더욱 긴 시간 산지에서, 손님들 물건을 직접 보내 왔습니다. 인천 연안부두에서 조그맣게 시작한 맛짱푸드는 어느덧 전국 각지에 창고를 두고 매일같이 당일 조업한 수산물을 경매받아 보내고 있습니다.
+                        
+                        저는 배움이 짧아 요즘 사람들처럼 세련되지 못 했습니다.
+                        남들 학교 다닐 때 배 타고 생선 만지던 그 시간들이 제 유일한 자부심 입니다. 친구들 만나 술 마실 나이부터 새벽에 어판장 뛰어다닌 것이 제 유일한 스펙 입니다.
+                        
+                        맛짱푸드는 맛에 진심입니다.
+                        좋은 물건 저렴하게 드리는 일에 자부심을 느끼고 있습니다.
+                        맛짱푸드는 사람에 진심입니다.
+                        사람이 전부라, 한 번 판매가 아니라 끝까지 책임지려 합니다.
+                        
+                        늘 진심이며 그것이 잃지 않는 초심이도록 하겠습니다.
+                        
+                        -맞짱푸드 배상
+                      </span>
+                      <span class="font-xs color-gray">후기 591 · 단골 9,931 · 수산물</span>
+                    </div>
+                  </a>  
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/3064426/1652236545670/2a6da3942b12aea8932ad3481c35a08d1963f09b44f746b12b06be72dec748d6.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">안주장인</span>
+                        <span class="ns-store-place">다대동</span>
+                      </div>
+                      <span class="ns-store-info">있는 안주를 가성비 있게 드리는 부산안주장인입니다^^</span>
+                      <span class="font-xs color-gray">후기 88 · 단골 9,707 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt md-bb flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/58019156/1652058569919/ee86dbd671c16bf3325d386a09e4485a045a2f6201f03a1682bd04386fb49858.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">크랩왕</span>
+                        <span class="ns-store-place">중앙동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        크랩전문 크랩왕입니다.
+    
+                        서해와 동해에 창고를 직접 운영하고 있어요.
+                        꽃게,랍스타,킹크랩,대게,홍게 등 모든 크랩 취급합니다.
+                        
+                        산지 창고에서 직접 물건 보고 발송해드립니다.
+                        
+                        보낸 물건에 대해서는 끝까지 책임집니다.
+                        
+                        긴말하지 않겠습니다.
+                        물건으로 증명하겠습니다.
+                        
+                        감사합니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 683 · 단골 9,331 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt d-none d-md-block me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/58550606/1653020331054/NzkzM2JiZWEyOTk5MzViMGY3ZTQ1YmFkZDY0OTNhYjZjYzgyZTI0MGNlM2YxYzJlOTY3NGVmZTgxNTE4ZTQ0NC5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">차박푸드</span>
+                        <span class="ns-store-place">다산동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        차박과 캠핑을 사랑하는 사람이에요.
+    
+                        김포에 육류 작업장을 운영해요.
+    
+                        차박이나 캠핑가실 때 먹을 건 제가 책임질게요!!
+                        믿고 맡겨주세요.
+                        가족,연인,친구 모두가 만족 하실 수 있는 음식 준비해 드릴게요.
+    
+                        완벽하게 보내드리고 싶으나 택배사고 포장실수 등이 나올 수 있어요.
+                        아무래도 사람이 하는 일이다 보니까요.
+    
+                        차박푸드는 보낸 물건을 끝까지 책입집니다.
+                        제 이름걸고 책임져요.
+                        10년간 지켜온 약속입니다.
+    
+                        즐겁고 좋은 시간 보내실 수 있게 
+                        작은 도움이 되겠습니다.
+                        감사합니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 433 · 단골 8,479 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt d-none d-md-block flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/businessPlatform/bizPlatform/profile/center_biz_5008601/1672363246191/5ef84810fb512264a0fa3ee073905a183b24ab775204d3c75d8c7eaa5d2c0f2d.png?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">김찬푸드</span>
+                        <span class="ns-store-place">서초동</span>
+                      </div>
+                      <span class="ns-store-info">김찬푸드는 도매를 전문으로 하던 전국 창고쟁이입니다. 그런 김찬푸드가 소매로 도매가로 고객님들을 만나려 합니다.</span>
+                      <span class="font-xs color-gray">후기 329 · 단골 8,450 · 수산물</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="button-cafe" role="tabpanel" aria-labelledby="button-cafe-tab" tabindex="0">
+              <div class="ns-store">
+                <div class="ns-store-item md-bb me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/11194762/1620227997817/f60ccbf4df31c71ad223d0c30af50ab23b7516eeb6d9f3f7515bb0f6b567fb57.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image" >
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">선유기지</span>
+                        <span class="ns-store-place">양평동4가</span>
+                      </div>
+                      <span class="ns-store-info">
+                        낭만을 추구하는 우리들만의 비밀기지, 선유기지 입니다.
+                        양평동 오래된 골목에 위치한 나만알고있는 
+                        비밀기지 컨셉의 아늑한 카페입니다. 
+                        아지트같은 지하공간이 매력적며 
+                        작지만 볼거리,즐길거리가 많은 장소입니다.
+                        
+                        &lt;선유피크닉 피크닉세트&gt;
+                        선유기지에서는 당신의 감성피크닉을 도와드려요. 
+                        소품들 챙겨올 필요 없이 모두 빌려주고 있어요.
+                        (피크닉매트, 피크닉바구니, 피크닉탁자, 크로플 2개, 음료 2개, 조화 꽃 장식)
+                        음료와 디저트까지 포함되어 있으니 몸만 오면 
+                        오늘의 피크닉 성공 :)
+                        
+                        *대여시간
+                        12:00~18:00, 6시간 대여
+                        (픽업시간 관계없이 6시 반납해주시면 됩니다)
+                        [인스타그램 및 블로그 사진업로드(선유기지 태그)시 
+                        대여시간 1시간 무료추가]
+                      </span>
+                      <span class="font-xs color-gray">후기 100 · 단골 4,011 · 카페</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/19867391/1658902045214/RUEyQUIxRTQtREVEMy00NjM1LUJBRkItRkVDOUFENERFMTdCLmpwZWc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">이천 코코카리브</span>
+                        <span class="ns-store-place">율현동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        코코카리브 - 2022년 시즌2 오픈 👉 페스티벌 🌊
+                        카브리해를 닮은 이국적인 프라이빗 풀,🇲🇽🏝
+                        카바나(방갈로)를 대여하면 야외 미온수 풀장
+                        무료 이용. 음식과 술 음료는 직접 사오세요. 🏖
+                        배달음식 시키셔도 됩니다👌
+                        
+                        동시에 딱 vip 12팀만 예약을 받으며 예약은
+                        네이버 검색: 코코카리브 
+                        홈피 드가셔서 실시간예약으로 예약하세요.
+                        https://cococarib.co.kr
+                        
+                        (7,8월 성수기 기준)
+                        카바나(방갈로)1동 + 프라이빗풀 이용권 4인=
+                        13만원 
+                        
+                        오전권- 오전10시~오후2시30분
+                        오후권- 오후3시 ~ 오후7시30분
+                        
+                        기타문의 0316330700
+                      </span>
+                      <span class="font-xs color-gray">후기 15 · 단골 2,713 · 카페</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/businessPlatform/bizPlatform/profile/center_biz_2350395/1663223389998/dcfc4fe8d78d62193aa3eddc7f898cb4a4998d24c9e8d2fb64c7b7304cdc6f24.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">가드니아 제빵소 본점</span>
+                        <span class="ns-store-place">사노동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        빵 맛집, 풍경 맛집, 햇살 맛집 [가드니아 제빵소] 입니다 :)
+                        구리/남양주 주민여러분! 
+                        가드니아 제빵소 본점 방문 한번 어떤가요?
+                        
+                        1. 고객과 가까운 곳에서
+                        - 가드니아 제빵소 본점은 고객님과 가까운 곳에 있습니다.
+                        - 남양주시 다산동/퇴계원읍 기준 5분
+                        - 구리시 갈매동/인창동/별내동 기준 8분
+                        
+                        2. 개방감 그리고 힐링
+                        - 가드니아 제빵소 본점은 고객님과 멀지 않은 곳에서, 멀리 떠나 온듯한 탁 트인 개방감 속에 힐링을 느낄 수 있는 곳입니다.
+                        - 경기도 구리시 사노동 높은 언덕에 자리 잡고 있어서 남양주 다산신도시와 왕숙체육공원, 금강로를 높은 위치에서 조망할 수 있습니다.
+                        - 가드니아는 전체 창문이 통창과 폴딩도어로 되어있어서 가슴이 탁 트이는 기분을 느끼실 수 있습니다.
+                        
+                        3. 맛있고 건강한 빵
+                        - 가드니아 제빵소는 유기농 밀가루, 천연 발효종, 고급 프랑스 버터를 사용하여 빵을 만듭니다.
+                        - 가드니아 제빵소는 당일생산 당일판매 원칙 고수합니다.
+                        - 고객 여러분께서는 맛있고 건강한 빵을 가드니아 제빵소에서 매일 만나실 수 있습니다.
+                        
+                        4. 편안한 주차환경
+                        - 가드니아 제빵소는 고객님의 편안한 방문을 위하여 넓은 주차공간을 확보하고 있습니다. :)
+                        
+                        5. 연중무휴, 그리고 이른 오픈
+                        - 가드니아 제빵소는 고객님께서 쉬시는 날, 맛있고 건강한 빵 그리고 쉼을 선물하기 위하여 연중무휴로 일을 합니다. 언제든지 편하게 방문해 주세요.
+                        - 9시 오픈 저녁 10시 마감(라스트 오더 9시)으로, 다른 곳보다 조금 이른 시간 부터 고객님을 맞이합니다. 아침 일찍 방문할 넓은 공간을 찾으신다면 가드니아 제빵소를 찾아주세요.
+                        
+                        6. 충분한 단체석
+                        - 가드니아 제빵소에는 단체손님들이 앉아서 모임하실 만한 좌석을 많이 확보하고 있습니다.
+                        - 미리 연락 주시면 더 넓고 좋은 자리에 않으실 수 있도록 미리 준비해 두겠습니다.
+                        - 10인 이상 네이버 예약 기능을 활용하여 주문시에 전체 결제금액 10% 할인해 드립니다. (1인 1음료 주문시)
+                        
+                        [네이버 플레이스 정보]
+                        http://naver.me/Gx6USHSZ
+                        
+                        [문의 전화]
+                        031-529-3221
+                      </span>
+                      <span class="font-xs color-gray">후기 92 · 단골 2,284 · 베이커리</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/1566245/1661606836753/ZWYzNDQ2M2FkNDI0MmM2Mzk4YzU4NzI3MmU4ZDMwODJhOWIxOThjODk2MmFmNTNiMTQ2YTYxOTcwNTU4OWNjZC5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">오후의빵집</span>
+                        <span class="ns-store-place">구의동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        오후의빵집 베이커리
+                        드디어 정식 매장으로 오픈합니다-!!!!
+                        위치는 동일합니다.
+                        
+                        2023년 4월 18일부터 
+                        앞으로 오후의빵집 정식 매장으로 찾아뵙겠습니다.
+                        
+                        OPEN 2023.4.18
+                        매주 화/수/목/금/토 
+                        오전 11시부터 - 7시까지
+                        (빵 소진시 조기마감)
+                        
+                        감사합니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 49 · 단골 1,691 · 제과/제빵</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/18415728/1651033276007/26683e80b8287a028ff2506e3ede99a7fc2c5ccc57ccffd5a09b3c0b6fa39203.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">구읍뱃터 창고형 의류매장</span>
+                        <span class="ns-store-place">중산동</span>
+                      </div>
+                      <span class="smb-list-item-description _1o1a6ke7"></span>
+                      <span class="ns-store-info">백화점입점 브랜드의류 최저가로 공급합니다.</span>
+                      <span class="font-xs color-gray">후기 603 · 단골 1,563 · 카페</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/15705170/1628388596093/a51e838b3a6e5d9861e0d268b5761703059b0ec9afaf33c7a876969265fab1b2.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">원레이</span>
+                        <span class="ns-store-place">이의동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        😍파이지부터 필링까지 100% 직접 만드는
+                        원레이 수제 에그타르트😍
+                        
+                        영양만점 아이들 간식으로도 정말 좋고,
+                        홈파티, 회사 간식으로도 정말 좋습니다.
+                        
+                        --------------------------------‐-------------------------------------
+                        프랑스 발효버터, 동물성 생크림, 마다카스카르산 프리미엄 바닐라빈 등  최고의 재료들로만 만들어 제공하고 있습니다.
+                        ----------------------------------------------------------------------
+                        
+                        ❣6개 구입시 무료로 박스에 안전하게 포장하여 
+                              드리고 있으며, 선물용 하시기에도 좋습니다.
+                        
+                        ❣취향에 따라 뿌려 드실 수 있는 
+                            시나몬 파우더를 함께 드리거나 뿌려드립니다.
+                        
+                        ❣예약 및 단체주문은 하루 전 미리 DM주시거나
+                              메시지 날려주세요!!
+                        
+                        🏍배민, 배달특급, 쿠팡이츠 배달 가능!
+                        
+                        주소 : 경기도 수원시 영통구 이의동 1331 광교푸르지오 월드스퀘어 1-26호 원레이(타마시헤어 옆)                      
+                      </span>
+                      <span class="font-xs color-gray">후기 123 · 단골 1,561 · 카페</span>
+                    </div>
+                  </a>  
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/4866139/1657772738831/Yzk1MjVjY2NlNWUwZWE0MjUzZjQ4N2M4YjNhMWFlZGVkNjY2MDEzMzcxODlkZWUyYzI1ZDJmZGVlM2ZmMWJmNi5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">블레스콘</span>
+                        <span class="ns-store-place">북변동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        사우동 스콘전문 🚩신상카페 🍪 당일구운 스콘을 맛보실수 있습니다.
+                        120석 대형루프탑에서  ✈️ 아름다운 스카이뷰를 즐겨보세요🤩 #모임추천
+                      </span>
+                      <span class="font-xs color-gray">후기 42 · 단골 1,551 · 카페</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt md-bb flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/44856271/1650377224666/1952649774a7c25f8f3180bfa5b114a369cb828b07c1356a156a735873f15651.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">크라상점 시흥은계점</span>
+                        <span class="ns-store-place">은행동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        ▫️▫️ 좋은 재료로 만들고 합리적인 가격으로 ▫️▫️ ▫️▫️ 당일 생산, 당일 판매하는 디저트 맛집 😄
+                        ▫️▫️ 선물이나 단체 예약으로도 좋습니다 👍🏻
+                      </span>
+                      <span class="font-xs color-gray">후기 101 · 단골 1,488 · 제과/제빵</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt d-none d-md-block me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/11029249/1651379613016/c2b7e7f341cc55700b5bcbc326d1aa9e7dac7faadc0ac74ac950f8ee21eb90ff.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">카페_엠비뉴</span>
+                        <span class="ns-store-place">삼전동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        삼전역 4번출구에서 도보 약1분 거리에 위치한 카페입니다. 엠비뉴 카페는 호텔라운지를 컨셉으로한 고급스럽고 편안한 느낌의 프리미엄라운지 카페입니다.
+                        엠비뉴만의 시그니처커피와 당일 구워낸 맛있는 디저트도 함께 준비되어있습니다. 🤗😀
+                        당근마켓에서 엠비뉴 단골맺으시고 다양한 이벤트소식과 쿠폰혜택을 받아보세요~!!
+                      </span>
+                      <span class="font-xs color-gray">후기 44 · 단골 1,325 · 카페</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt d-none d-md-block flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/capri/smb/202101/50bcbb1875c4b209188a48f6c5b275228fc141676a8d98e176.jpeg?q=95&s=1440x1440&t=inside" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">슈츠</span>
+                        <span class="ns-store-place">동명면</span>
+                      </div>
+                      <span class="ns-store-info">
+                        팔공산에 위치한 카페 슈츠입니다.
+                        좋은 기억으로 남도록 항상 최선을 다하겠습니다.
+                        
+                        주말 과 평일 빵의 종류와 물량이 다르다는 점 참고해주시면 감사하겠습니다.👍
+                      </span>
+                      <span class="font-xs color-gray">후기 134 · 단골 1,252 · 마카롱</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="button-move" role="tabpanel" aria-labelledby="button-move-tab" tabindex="0">
+              <div class="ns-store">
+                <div class="ns-store-item md-bb me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/9318638/1677133706898/MGJjNGM2ZDc1ZGU2MDVlZmI3Y2Y1Y2IyM2MyMzNjNmU1OThkMTdkMzdkYjliMDI2Y2RkMTczMDczOTExYTdkZi5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image" >
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">행복홀릭용달이사</span>
+                        <span class="ns-store-place">주안동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        안녕하세요~포장이사 원룸 투룸
+                        친절한이사 가전 가구 에어컨 냉난방기설치
+                        운반,운송하고 있습니다.
+                        기본적으로 같이 상차해서 도착지까지 
+                        안전하게 운송해드립니다.
+                        항상 최선을 다해드립니다~
+                        생활가구 및 가전제품
+                        단순운송부터 원룸이사까지~ 
+                        언제든 상담가능합니다~
+                        저렴한 원룸이사,간단이사 문의주세요!
+                        동승 추가비용 없습니다^^
+                        날짜,시간,출발지,도착지,물건사진
+                        먼저 주시면 빠르게 견적 받으실수 있습니다
+                        연락주세요 010-6285-1570
+                        원룸,투룸,오피스텔,이사문의환영 
+                        단순운송문의환영
+                        운송이 아니더니라도 옮겨야할 짐이 있으시면 연락 주세요
+                        문의 주시면 자세히 상담해 드립니다
+                        많은 이용 바랍니다
+                        항상 친절하게 모시겠습니다
+                        감사합니다 행복하세요~^^
+                      </span>
+                      <span class="font-xs color-gray">후기 1,088 · 단골 3,636 · 이사</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/15531605/1644198638814/f15f2e693ee5d69b86b7a682c0cd44b61f83f2b2152e037104d5676290437551.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">쿠팡이츠 배달파트너</span>
+                        <span class="ns-store-place">역삼동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        초보자도 쉽게 시작하는 쿠팡이츠 배달파트너.지금 배달파트너 시작하면 첫배달 최대 3만원 추가 보너스 지급! 내가 원하는 시간에 내가 원하는 방법으로 어디서나 시작해보세요!
+                      </span>
+                      <span class="font-xs color-gray">후기 72 · 단골 3,330 · 배송</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/1074637/1670051489282/MWIyOWExM2FhYzg0N2Q5N2NmM2M1NmEyYzkyYzcxYmJkOGQ4OGZlYjhkNTRiZTYxNDg0YjVkMDgxMzBhNzExZS5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">신군용달이사</span>
+                        <span class="ns-store-place">탑동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        25년 이사짐 경력으로 고객님들의 가전 가구 모든 이송이 가능 합니다
+                        저렴한 가격으로 최고의 실력으로 배송하겠습니다 걱정 말고 연락 주시기 바랍니다 24시간 언제든 연락 기다리겠습니다
+                        일반 가정 이사 소형 이사. 원룸 투룸 이사 다 가능 언제든지 야간도 가능 연락주세요01091501314 신군용달
+                        에어컨도 탈착 가능 설치는 전문 기사분과 조 인해드립니다 기본 설치비 없이 설치 가능 무엇이든 해드립니다 냉장고.TV,세탁기,옷장,장농,에어컨,책상,쇼파,서랍장,식탁,의자,거실장,장식장,책장,책꽂이 등등 
+                        
+                        대형 가정 이사나  소량짐이나 오피스텔 원룸이삿짐 학생 자취짐 지방 화물 장거리 운행도 가능하고 24시간 운행 가능합니다.
+                        기타 심부름도 가능합니다.
+                        
+                        소개업체를 거치지 않고 직접배송하니 저렴하게 해드리겠습니다.
+                        구체적인 내용(운행거리/가구,대형가전/계단여부/기사도움여부)말씀해주시면 바로 견적 가능합니다.
+                        체팅보다는 전화나 문자주세요.
+                      </span>
+                      <span class="font-xs color-gray">후기 704 · 단골 3,295 · 이사</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/4259590/1637314165750/18b4ee0ee4821527548e34bcf079dd4016bf07a1e956b67e893d304bcc938c17.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">훈민용달,이사,용달이사 화물</span>
+                        <span class="ns-store-place">신정동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        가전,가구,원,투룸이사,화물배송 훈민용달 입니다. 010-5006-7445 입니다..호루와 리프트가 장착되어있어 무거운 물건도 손상없이 이동 운반가능 하고 비가와도 비안맞고 배송이 가능합니다. 일반용달,원룸이사,가전,드레스룸 이전설치가구배치 전문입니다. 최선을 다해서 모시겠습니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 1,705 · 단골 2,986 · 제과/이사</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/22654658/1653385863313/MWExZmJiM2IyZTg0OWZlZDQ1MTc0NDg0N2U1MTMwOWE4OWNmNGQyMTViNDk1NzY5YjIyMmY4M2MzOGY3Zjg2My5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">노랑이사/용달</span>
+                        <span class="ns-store-place">봉천동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        고객 후기 1등 친절 업체~!
+                        이사! 용달!
+                        언제든지 연락주세요~!
+                        
+                        눈,비 걱정없는 호루 장착 차량으로 안전하게 옮겨드립니다~!
+                        
+                        원룸이사, 일반이사, 용달이사, 가구, 가전, 침대, 매트리스, 식탁, 소파, 세탁기, 건조기, 냉장고, 책장, 책상, 의자, 운반, 이사, 용달, 화물, 운송 등등                     
+                      </span>
+                      <span class="font-xs color-gray">후기 924 · 단골 2,858 · 이사</span>
+                    </div>
+                  </a>  
+                </div>
+                <div class="ns-store-item bt flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/8240963/1631367629969/ea82dda6ce2727a0371bde255ffe6fe00e82df260fbfb55668f02fa94bf06a5f.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">용달홍반장</span>
+                        <span class="ns-store-place">동춘동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        🌈🌈5000원 무료할인 쿠폰 이벤트중!!🌈🌈
 
-                    새벽에 수산물을 받아와 도매가로 드리는 갑을농수산입니다.
-                    
-                    전국 7개 지점에 창고를 두고 있고 이는 산지의 신선함을 그대로 배송하기 위함입니다.
-                    
-                    새로운 고객, 아니! 새로운 가족분들을 위함에 돈을 아끼지 않습니다.
-                    마구 마구 저렴하게 드릴 테니 필요한 상품 있으시면 언제든 문의주세요!
-                  </span>
-                  <span class="font-xs color-gray">후기 1,580 · 단골 22,310 · 식자재판매</span>
-                </div>
-              </a>
-            </div>
-            <div class="ns-store-item bt me-md-5">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/21709505/1653454688660/ZjZmYTViYWMzMWRkMjhlNjg0NGIxOGRhM2UzOGNiMDBlNTY1ZThmOWRkYTYyMTFiZDA0MzhjMGY2NzI3N2M1NC5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">찐신선 정육점</span>
-                    <span class="font-small color-gray">팔탄면</span>
-                  </div>
-                  <span class="ns-store-info">세계적인 육류 선두 기업들로부터 직수입하여 
-                    유통마진없이 최종소비자에게 배송해드리는 
-                    찐신선 온라인정육점 입니다.😄
-                    
-                    매주 다양한 고기부위 할인소식받으시고
-                    "좋은고기" "좋은가격"에 드세요🥰
-                    
-                    "찐신선" 을 검색해보세요.
-                    www.jjinsinsun.com
-                    
-                    평일 낮12시 이전 주문 시 다음날 받아요.😊
-                    서울 및 수도권 대부분 지역 새벽배송돼요.😄
-                    4만원 이상 주문시 무료배송 이에요😊
-                    
-                    카카오채널
-                    https://pf.kakao.com/_XAKDxb
-                    
-                    찐신선 어플도 있습니다!
-                    
-                    많은관심 바랍니다♡
-                  </span>
-                  <span class="font-xs color-gray">후기 675 · 단골 21,856 · 정육점</span>
-                </div>
-              </a>
-            </div>
-            <div class="ns-store-item bt flex-md-grow-1">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/businessPlatform/bizPlatform/profile/center_biz_3568585/1669188796548/f0640532c68de863ea734e2349ff0379a759e345ffd71b1fe68ba22108914459.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">식품명가 파란거북</span>
-                    <span class="font-small color-gray">만촌동</span>
-                  </div>
-                  <span class="ns-store-info">[지역회사가 아닌 산지직발송 원청업체입니다.]
 
-                    식품 명가 파란거북.
-                    거북은 예로부터 신뢰와 신의를 상징한다 했습니다.
-                    신뢰, 신의. 품질. 돈보다 중요한 가치들이 명가를 만듭니다.
-                    
-                    좋은 상품으로 말하겠습니다.
-                  </span>
-                  <span class="font-xs color-gray">후기 1,178 · 단골 21,315 · 수산물</span>
+                        기본운송3만원~!!
+                        (단거리,단품,차앞상하차,후기조건)
+                        
+                        
+                        원룸이사, 오피스텔이사. 이사전문, 1톤용달전문.
+                        
+                        ● 물건사진 먼저 보내주시고
+                        상하차 동네..엘리베이터유무를 적어서
+                        ● 01022466482 용달반장으로
+                        문자, 당근채팅,카카오톡 부탁드립니다
+                        ● 고객님들의 부담을 가장 줄여드리고&nbsp;
+                        합리적인가격과 친절로 보답해드릴께요~
+                        
+                        감사합니다~~^^
+                      </span>
+                      <span class="font-xs color-gray">후기 621 · 단골 2,384 · 용달</span>
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div class="ns-store-item bt me-md-5">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/50095049/1638929787569/978227fd2caa69a520f7169a35af8a740319cfa5896a8173b08f12044632c757.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">거저주는 거저몰</span>
-                    <span class="font-small color-gray">등촌동</span>
-                  </div>
-                  <span class="ns-store-info">최저가 농•축•수산물 쇼핑몰입니다.
-                    제조사와 소비자 사이의 유통단계를 축소시켜 건강한 식품을 합리적인 가격으로 소개합니다.
-                    ※경매 소식 받는 건 공짜에요!!※
-                    ⠀
-                    ▼ 1:1 카카오톡 주문/문의 ▼
-                  </span>
-                  <span class="font-xs color-gray">후기 1,365 · 단골 20,276 · 식육판매업</span>
+                <div class="ns-store-item bt me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/11374189/1671702485012/MDdlZWMzM2RjYmFkOTA5NzhiMTBlN2JjZjA5NGI2MGRkZDcxYjhkZTFhYzUzY2UwYTE5OTA5MDIzODdjZTc1OC5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">나르샤 용달 이사</span>
+                        <span class="ns-store-place">중앙동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        (성남당근 고객님들이  제일 많이 
+                        찾는 1등 성남대표 나르샤 이사)
+                        이사와 운반은 나르샤 이사로
+                        원룸 투룸 포장 반포장 가정집이사
+                        가전제품 가구 운송까지
+                        ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                        차량에 리프트가 설치되어 편안하고 
+                        안전하게 이사와 운반을 해드립니다.
+                        ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                        # 이사 # 가전가구운송 
+                        # 집안 가전가구 이동 
+                        # 지방이사 # 지방용달 
+                        ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                      </span>
+                      <span class="font-xs color-gray">후기 665 · 단골 2,302 · 이사</span>
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div class="ns-store-item bt flex-md-grow-1">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/59321401/1654655330999/ZTI4NGI3NjdmZTU5YzJiNDVlY2YxMmE2ZTdhN2Y3ZWQ1ZDU5ODMzMDgzZDdmY2Q1ZTUzOTA0NmMyZWNiY2VmNy5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">팔팔키친</span>
-                    <span class="font-small color-gray">통진읍</span>
-                  </div>
-                  <span class="ns-store-info">주말 및 공휴일은 답변이 조금 늦어도 양해해주시고 채팅으로 남겨주세요!!
+                <div class="ns-store-item bt md-bb flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/15745237/1623206208454/38c0ec492f7d4a2cae392beab8def64045862a818bd38ee7bad73a06e7eb0dd0.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">쿠팡플렉스</span>
+                        <span class="ns-store-place">신천동</span>
+                      </div>
+                      <span class="ns-store-info">원하는 날, 집 근처에서 가능한 꿀 투잡!🍯</span>
+                      <span class="font-xs color-gray">후기 58 · 단골 2,284 · 배송</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="ns-store-item bt d-none d-md-block me-md-5">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/52056/1652099986435/fee6601cea735a691069e73651cbfd664a92c558ad40d2f2216bc812770994af.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">이기사 개인용달</span>
+                        <span class="ns-store-place">가락동</span>
+                      </div>
+                      <span class="ns-store-info">☆☆ 고객후기 1등 꼼꼼한 일처리 친절업체  ☆☆
 
-                    또한 매장이 아닌 창고라 말씀 안주시고 찾아오시는 건 삼가주시면 감사하겠습니다!
-                    
-                    저희는 김포에 축산 및 수입륙 창고, 하남 가공식품 창고, 부산 식품 및 oem 창고, 대구에 축산지점 운영하고 있는 팔팔키친입니다^^
-                    
-                    당근마켓에 싸고 저렴하지만 만족감 높은 고기 드리고싶어서 출사표 던져봅니다
-                    
-                    항상 상품에 문제가 있다면 사진만 상세히 찍어 문의주세요.
-                    
-                    구매문의는 전화보단 톡으로 남겨주세요!
-                    
-                    감사합니다!!
-                  </span>
-                  <span class="font-xs color-gray">후기 1,466 · 단골 17,758 · 식육판매업</span>
+                        이기사 개인용달 견적문의 010-3263-6070 </span>
+                      <span class="font-xs color-gray">후기 884 · 단골 2,201 · 용달</span>
+                    </div>
+                  </a>
                 </div>
-              </a>  
+                <div class="ns-store-item bt d-none d-md-block flex-md-grow-1">
+                  <a class="ns-store-group" href="">
+                    <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/34882823/1632310381955/75043575fd24a0e6bf9ea004398e60c19cbd9f57475ae885395383ad60192a58.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                    <div class="ns-store-info-group">
+                      <div class="ns-store-info-title">
+                        <span class="ns-store-name">당근마켓 가구운송 원투룸이사</span>
+                        <span class="ns-store-place">서초동</span>
+                      </div>
+                      <span class="ns-store-info">
+                        ❤당근마켓 운송 최저가격❤
+                        🎈운송 이용자 단골 2000명 넘는이유가있습니다🎈 
+                        운송 가구 가전제품 소파 냉장고 에어컨 메트리스 침대 등 가능합니다
+                        이사 관련 원룸,투룸까지 가능합니다
+                        
+                        ❤️ 후기 작성 할인❤️
+                         후기작성 확인 후 5퍼센트 할인 적용 이벤트 진행 중 입니다 ^^
+                        
+                        예약금 관련해서는 이사 해당일로부터 5일전까지 취소시만 환불 가능합니다.
+                      </span>
+                      <span class="font-xs color-gray">후기 52 · 단골 2,189 · 용달</span>
+                    </div>
+                  </a>
+                </div>
+        
+              </div>
             </div>
-            <div class="ns-store-item bt me-md-5">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/26101884/1667193649988/Yzg0M2MyOTMxZDkwNWRjYTM1YzQ1MjMzODM3ZWU2MTVmNjhmMzc4Y2MzNTc5MzdlZDIxODM1OTA0MzI0MWM3Mi5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">렌탈24</span>
-                    <span class="font-small color-gray">장기동</span>
+            <div class="tab-pane fade" id="button-beauty" role="tabpanel" aria-labelledby="button-beauty-tab" tabindex="0">
+              <div class="ns-store">
+                <div class="ns-store">
+                  <div class="ns-store-item md-bb me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/9318638/1677133706898/MGJjNGM2ZDc1ZGU2MDVlZmI3Y2Y1Y2IyM2MyMzNjNmU1OThkMTdkMzdkYjliMDI2Y2RkMTczMDczOTExYTdkZi5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image" >
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">행복홀릭용달이사</span>
+                          <span class="ns-store-place">주안동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          안녕하세요~포장이사 원룸 투룸
+                          친절한이사 가전 가구 에어컨 냉난방기설치
+                          운반,운송하고 있습니다.
+                          기본적으로 같이 상차해서 도착지까지 
+                          안전하게 운송해드립니다.
+                          항상 최선을 다해드립니다~
+                          생활가구 및 가전제품
+                          단순운송부터 원룸이사까지~ 
+                          언제든 상담가능합니다~
+                          저렴한 원룸이사,간단이사 문의주세요!
+                          동승 추가비용 없습니다^^
+                          날짜,시간,출발지,도착지,물건사진
+                          먼저 주시면 빠르게 견적 받으실수 있습니다
+                          연락주세요 010-6285-1570
+                          원룸,투룸,오피스텔,이사문의환영 
+                          단순운송문의환영
+                          운송이 아니더니라도 옮겨야할 짐이 있으시면 연락 주세요
+                          문의 주시면 자세히 상담해 드립니다
+                          많은 이용 바랍니다
+                          항상 친절하게 모시겠습니다
+                          감사합니다 행복하세요~^^
+                        </span>
+                        <span class="font-xs color-gray">후기 1,088 · 단골 3,636 · 이사</span>
+                      </div>
+                    </a>
                   </div>
-                  <span class="ns-store-info">후기만 600개 성지 [렌탈24] 입니다❤️
-
-                    정수기/공청기/비데 등 렌탈 온라인 공식 접수처입니다!
-                    혜택 설치 당일 지급/업계 최고 혜택 약속드립니다!
-                    렌탈료는 최저로, 혜택은 최대로!
-                    전국 가장 빠른 다음날 설치약속드립니다!
-                    언제든지 문의주세요!!
-                    
-                    1800-8938
-                  </span>
-                  <span class="font-xs color-gray">후기 629 · 단골 17,461 · 정수기판매</span>
-                </div>
-              </a>
-            </div>
-            <div class="ns-store-item bt md-bb flex-md-grow-1">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/businessPlatform/bizPlatform/profile/center_biz_3297562/1667283386776/b926e1715c9b26523a4c17b940ad5f29d96838acfa61f6621bbccb5829514ae0.png?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">제주농협</span>
-                    <span class="font-small color-gray">삼도1동</span>
+                  <div class="ns-store-item flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/15531605/1644198638814/f15f2e693ee5d69b86b7a682c0cd44b61f83f2b2152e037104d5676290437551.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">쿠팡이츠 배달파트너</span>
+                          <span class="ns-store-place">역삼동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          초보자도 쉽게 시작하는 쿠팡이츠 배달파트너.지금 배달파트너 시작하면 첫배달 최대 3만원 추가 보너스 지급! 내가 원하는 시간에 내가 원하는 방법으로 어디서나 시작해보세요!
+                        </span>
+                        <span class="font-xs color-gray">후기 72 · 단골 3,330 · 배송</span>
+                      </div>
+                    </a>
                   </div>
-                  <span class="ns-store-info">부득이 채팅 답변이 어렵습니다. 문의사항은 서비스 센터로 부탁드립니다! 
-                    ☎️ 070-4471-0231 
-                    
-                    제주도내 19개 지역농협의 농산물을 판매하는 통합마케팅 조직입니다. 
-                  </span>
-                  <span class="font-xs color-gray">후기 2,069 · 단골 15,508 · 유기농식품판매</span>
-                </div>
-              </a>
-            </div>
-            <div class="ns-store-item bt d-none d-md-block me-md-5">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/59615634/1655340335580/ODllOTRlNDZkOWZlMTJhY2ZiM2E3NzBmMGQyNGMwZjBjODgzMGNmZTY0MGFmZDRlOWY2ZGM1YmYzYjEzY2EyOS5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">물고기와 육고기</span>
-                    <span class="font-small color-gray">소룡동</span>
+                  <div class="ns-store-item bt me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/1074637/1670051489282/MWIyOWExM2FhYzg0N2Q5N2NmM2M1NmEyYzkyYzcxYmJkOGQ4OGZlYjhkNTRiZTYxNDg0YjVkMDgxMzBhNzExZS5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">신군용달이사</span>
+                          <span class="ns-store-place">탑동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          25년 이사짐 경력으로 고객님들의 가전 가구 모든 이송이 가능 합니다
+                          저렴한 가격으로 최고의 실력으로 배송하겠습니다 걱정 말고 연락 주시기 바랍니다 24시간 언제든 연락 기다리겠습니다
+                          일반 가정 이사 소형 이사. 원룸 투룸 이사 다 가능 언제든지 야간도 가능 연락주세요01091501314 신군용달
+                          에어컨도 탈착 가능 설치는 전문 기사분과 조 인해드립니다 기본 설치비 없이 설치 가능 무엇이든 해드립니다 냉장고.TV,세탁기,옷장,장농,에어컨,책상,쇼파,서랍장,식탁,의자,거실장,장식장,책장,책꽂이 등등 
+                          
+                          대형 가정 이사나  소량짐이나 오피스텔 원룸이삿짐 학생 자취짐 지방 화물 장거리 운행도 가능하고 24시간 운행 가능합니다.
+                          기타 심부름도 가능합니다.
+                          
+                          소개업체를 거치지 않고 직접배송하니 저렴하게 해드리겠습니다.
+                          구체적인 내용(운행거리/가구,대형가전/계단여부/기사도움여부)말씀해주시면 바로 견적 가능합니다.
+                          체팅보다는 전화나 문자주세요.
+                        </span>
+                        <span class="font-xs color-gray">후기 704 · 단골 3,295 · 이사</span>
+                      </div>
+                    </a>
                   </div>
-                  <span class="ns-store-info">좋은데 저렴한 상품은 없습니다.
-                    가격의 합당함.
-                    거품 없는 합당한 가격에 드릴게요!
-                  </span>
-                  <span class="font-xs color-gray">후기 1,233 · 단골 15,083 · 식자재판매</span>
-                </div>
-              </a>
-            </div>
-            <div class="ns-store-item bt d-none d-md-block flex-md-grow-1">
-              <a class="ns-store-group" href="">
-                <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/31657420/1678103289195/NzBhN2U2NGZhN2RlOTlmYjM2YmYxODcxZjBhYjQ5ZGMzNzU3MWNhNmMzM2FlOTA0NTE3YjM0N2FjNjY1NDhiNC5qcGc=.jpeg?q=82&amp;s=640x640&amp;t=crop" class="thumbnail-image">
-                <div class="ns-store-info-group">
-                  <div>
-                    <span class="ns-store-name">임은하푸드 인천창고</span>
-                    <span class="font-small color-gray">오천읍</span>
+                  <div class="ns-store-item bt flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/4259590/1637314165750/18b4ee0ee4821527548e34bcf079dd4016bf07a1e956b67e893d304bcc938c17.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">훈민용달,이사,용달이사 화물</span>
+                          <span class="ns-store-place">신정동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          가전,가구,원,투룸이사,화물배송 훈민용달 입니다. 010-5006-7445 입니다..호루와 리프트가 장착되어있어 무거운 물건도 손상없이 이동 운반가능 하고 비가와도 비안맞고 배송이 가능합니다. 일반용달,원룸이사,가전,드레스룸 이전설치가구배치 전문입니다. 최선을 다해서 모시겠습니다.
+                        </span>
+                        <span class="font-xs color-gray">후기 1,705 · 단골 2,986 · 제과/이사</span>
+                      </div>
+                    </a>
                   </div>
-                  <span class="ns-store-info">
-                    안녕하세요 ~~^^ 
-                    저는 전국 8곳 창고를 운영중입니다 .
-                    매일 새벽 위판경매를 보고 직접수매 및 택배작업을 합니다
-
-                    상품이 별로거나 기대이하였다면,
-                    속상해 마시고 꼭 말씀주세요.
-
-                    제가 부재면 사진 여러장 꼭 찍어주세요.
-
-                    마지막까지 책임지겠습니다.
-                  </span>
-                  <span class="font-xs color-gray">후기 1,343 · 단골 14,884 · 수산물</span>
+                  <div class="ns-store-item bt me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/22654658/1653385863313/MWExZmJiM2IyZTg0OWZlZDQ1MTc0NDg0N2U1MTMwOWE4OWNmNGQyMTViNDk1NzY5YjIyMmY4M2MzOGY3Zjg2My5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">노랑이사/용달</span>
+                          <span class="ns-store-place">봉천동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          고객 후기 1등 친절 업체~!
+                          이사! 용달!
+                          언제든지 연락주세요~!
+                          
+                          눈,비 걱정없는 호루 장착 차량으로 안전하게 옮겨드립니다~!
+                          
+                          원룸이사, 일반이사, 용달이사, 가구, 가전, 침대, 매트리스, 식탁, 소파, 세탁기, 건조기, 냉장고, 책장, 책상, 의자, 운반, 이사, 용달, 화물, 운송 등등                     
+                        </span>
+                        <span class="font-xs color-gray">후기 924 · 단골 2,858 · 이사</span>
+                      </div>
+                    </a>  
+                  </div>
+                  <div class="ns-store-item bt flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/8240963/1631367629969/ea82dda6ce2727a0371bde255ffe6fe00e82df260fbfb55668f02fa94bf06a5f.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">용달홍반장</span>
+                          <span class="ns-store-place">동춘동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          🌈🌈5000원 무료할인 쿠폰 이벤트중!!🌈🌈
+  
+  
+                          기본운송3만원~!!
+                          (단거리,단품,차앞상하차,후기조건)
+                          
+                          
+                          원룸이사, 오피스텔이사. 이사전문, 1톤용달전문.
+                          
+                          ● 물건사진 먼저 보내주시고
+                          상하차 동네..엘리베이터유무를 적어서
+                          ● 01022466482 용달반장으로
+                          문자, 당근채팅,카카오톡 부탁드립니다
+                          ● 고객님들의 부담을 가장 줄여드리고&nbsp;
+                          합리적인가격과 친절로 보답해드릴께요~
+                          
+                          감사합니다~~^^
+                        </span>
+                        <span class="font-xs color-gray">후기 621 · 단골 2,384 · 용달</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/11374189/1671702485012/MDdlZWMzM2RjYmFkOTA5NzhiMTBlN2JjZjA5NGI2MGRkZDcxYjhkZTFhYzUzY2UwYTE5OTA5MDIzODdjZTc1OC5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">나르샤 용달 이사</span>
+                          <span class="ns-store-place">중앙동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          (성남당근 고객님들이  제일 많이 
+                          찾는 1등 성남대표 나르샤 이사)
+                          이사와 운반은 나르샤 이사로
+                          원룸 투룸 포장 반포장 가정집이사
+                          가전제품 가구 운송까지
+                          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                          차량에 리프트가 설치되어 편안하고 
+                          안전하게 이사와 운반을 해드립니다.
+                          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                          # 이사 # 가전가구운송 
+                          # 집안 가전가구 이동 
+                          # 지방이사 # 지방용달 
+                          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                        </span>
+                        <span class="font-xs color-gray">후기 665 · 단골 2,302 · 이사</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt md-bb flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/15745237/1623206208454/38c0ec492f7d4a2cae392beab8def64045862a818bd38ee7bad73a06e7eb0dd0.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">쿠팡플렉스</span>
+                          <span class="ns-store-place">신천동</span>
+                        </div>
+                        <span class="ns-store-info">원하는 날, 집 근처에서 가능한 꿀 투잡!🍯</span>
+                        <span class="font-xs color-gray">후기 58 · 단골 2,284 · 배송</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt d-none d-md-block me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/52056/1652099986435/fee6601cea735a691069e73651cbfd664a92c558ad40d2f2216bc812770994af.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">이기사 개인용달</span>
+                          <span class="ns-store-place">가락동</span>
+                        </div>
+                        <span class="ns-store-info">☆☆ 고객후기 1등 꼼꼼한 일처리 친절업체  ☆☆
+  
+                          이기사 개인용달 견적문의 010-3263-6070 </span>
+                        <span class="font-xs color-gray">후기 884 · 단골 2,201 · 용달</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt d-none d-md-block flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/34882823/1632310381955/75043575fd24a0e6bf9ea004398e60c19cbd9f57475ae885395383ad60192a58.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">당근마켓 가구운송 원투룸이사</span>
+                          <span class="ns-store-place">서초동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          ❤당근마켓 운송 최저가격❤
+                          🎈운송 이용자 단골 2000명 넘는이유가있습니다🎈 
+                          운송 가구 가전제품 소파 냉장고 에어컨 메트리스 침대 등 가능합니다
+                          이사 관련 원룸,투룸까지 가능합니다
+                          
+                          ❤️ 후기 작성 할인❤️
+                           후기작성 확인 후 5퍼센트 할인 적용 이벤트 진행 중 입니다 ^^
+                          
+                          예약금 관련해서는 이사 해당일로부터 5일전까지 취소시만 환불 가능합니다.
+                        </span>
+                        <span class="font-xs color-gray">후기 52 · 단골 2,189 · 용달</span>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
-
+            <div class="tab-pane fade" id="button-health" role="tabpanel" aria-labelledby="button-health-tab" tabindex="0">
+              <div class="ns-store">
+                <div class="ns-store">
+                  <div class="ns-store-item md-bb me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/9318638/1677133706898/MGJjNGM2ZDc1ZGU2MDVlZmI3Y2Y1Y2IyM2MyMzNjNmU1OThkMTdkMzdkYjliMDI2Y2RkMTczMDczOTExYTdkZi5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image" >
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">행복홀릭용달이사</span>
+                          <span class="ns-store-place">주안동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          안녕하세요~포장이사 원룸 투룸
+                          친절한이사 가전 가구 에어컨 냉난방기설치
+                          운반,운송하고 있습니다.
+                          기본적으로 같이 상차해서 도착지까지 
+                          안전하게 운송해드립니다.
+                          항상 최선을 다해드립니다~
+                          생활가구 및 가전제품
+                          단순운송부터 원룸이사까지~ 
+                          언제든 상담가능합니다~
+                          저렴한 원룸이사,간단이사 문의주세요!
+                          동승 추가비용 없습니다^^
+                          날짜,시간,출발지,도착지,물건사진
+                          먼저 주시면 빠르게 견적 받으실수 있습니다
+                          연락주세요 010-6285-1570
+                          원룸,투룸,오피스텔,이사문의환영 
+                          단순운송문의환영
+                          운송이 아니더니라도 옮겨야할 짐이 있으시면 연락 주세요
+                          문의 주시면 자세히 상담해 드립니다
+                          많은 이용 바랍니다
+                          항상 친절하게 모시겠습니다
+                          감사합니다 행복하세요~^^
+                        </span>
+                        <span class="font-xs color-gray">후기 1,088 · 단골 3,636 · 이사</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/15531605/1644198638814/f15f2e693ee5d69b86b7a682c0cd44b61f83f2b2152e037104d5676290437551.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">쿠팡이츠 배달파트너</span>
+                          <span class="ns-store-place">역삼동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          초보자도 쉽게 시작하는 쿠팡이츠 배달파트너.지금 배달파트너 시작하면 첫배달 최대 3만원 추가 보너스 지급! 내가 원하는 시간에 내가 원하는 방법으로 어디서나 시작해보세요!
+                        </span>
+                        <span class="font-xs color-gray">후기 72 · 단골 3,330 · 배송</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/1074637/1670051489282/MWIyOWExM2FhYzg0N2Q5N2NmM2M1NmEyYzkyYzcxYmJkOGQ4OGZlYjhkNTRiZTYxNDg0YjVkMDgxMzBhNzExZS5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">신군용달이사</span>
+                          <span class="ns-store-place">탑동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          25년 이사짐 경력으로 고객님들의 가전 가구 모든 이송이 가능 합니다
+                          저렴한 가격으로 최고의 실력으로 배송하겠습니다 걱정 말고 연락 주시기 바랍니다 24시간 언제든 연락 기다리겠습니다
+                          일반 가정 이사 소형 이사. 원룸 투룸 이사 다 가능 언제든지 야간도 가능 연락주세요01091501314 신군용달
+                          에어컨도 탈착 가능 설치는 전문 기사분과 조 인해드립니다 기본 설치비 없이 설치 가능 무엇이든 해드립니다 냉장고.TV,세탁기,옷장,장농,에어컨,책상,쇼파,서랍장,식탁,의자,거실장,장식장,책장,책꽂이 등등 
+                          
+                          대형 가정 이사나  소량짐이나 오피스텔 원룸이삿짐 학생 자취짐 지방 화물 장거리 운행도 가능하고 24시간 운행 가능합니다.
+                          기타 심부름도 가능합니다.
+                          
+                          소개업체를 거치지 않고 직접배송하니 저렴하게 해드리겠습니다.
+                          구체적인 내용(운행거리/가구,대형가전/계단여부/기사도움여부)말씀해주시면 바로 견적 가능합니다.
+                          체팅보다는 전화나 문자주세요.
+                        </span>
+                        <span class="font-xs color-gray">후기 704 · 단골 3,295 · 이사</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/4259590/1637314165750/18b4ee0ee4821527548e34bcf079dd4016bf07a1e956b67e893d304bcc938c17.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">훈민용달,이사,용달이사 화물</span>
+                          <span class="ns-store-place">신정동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          가전,가구,원,투룸이사,화물배송 훈민용달 입니다. 010-5006-7445 입니다..호루와 리프트가 장착되어있어 무거운 물건도 손상없이 이동 운반가능 하고 비가와도 비안맞고 배송이 가능합니다. 일반용달,원룸이사,가전,드레스룸 이전설치가구배치 전문입니다. 최선을 다해서 모시겠습니다.
+                        </span>
+                        <span class="font-xs color-gray">후기 1,705 · 단골 2,986 · 제과/이사</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/22654658/1653385863313/MWExZmJiM2IyZTg0OWZlZDQ1MTc0NDg0N2U1MTMwOWE4OWNmNGQyMTViNDk1NzY5YjIyMmY4M2MzOGY3Zjg2My5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">노랑이사/용달</span>
+                          <span class="ns-store-place">봉천동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          고객 후기 1등 친절 업체~!
+                          이사! 용달!
+                          언제든지 연락주세요~!
+                          
+                          눈,비 걱정없는 호루 장착 차량으로 안전하게 옮겨드립니다~!
+                          
+                          원룸이사, 일반이사, 용달이사, 가구, 가전, 침대, 매트리스, 식탁, 소파, 세탁기, 건조기, 냉장고, 책장, 책상, 의자, 운반, 이사, 용달, 화물, 운송 등등                     
+                        </span>
+                        <span class="font-xs color-gray">후기 924 · 단골 2,858 · 이사</span>
+                      </div>
+                    </a>  
+                  </div>
+                  <div class="ns-store-item bt flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/8240963/1631367629969/ea82dda6ce2727a0371bde255ffe6fe00e82df260fbfb55668f02fa94bf06a5f.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">용달홍반장</span>
+                          <span class="ns-store-place">동춘동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          🌈🌈5000원 무료할인 쿠폰 이벤트중!!🌈🌈
+  
+  
+                          기본운송3만원~!!
+                          (단거리,단품,차앞상하차,후기조건)
+                          
+                          
+                          원룸이사, 오피스텔이사. 이사전문, 1톤용달전문.
+                          
+                          ● 물건사진 먼저 보내주시고
+                          상하차 동네..엘리베이터유무를 적어서
+                          ● 01022466482 용달반장으로
+                          문자, 당근채팅,카카오톡 부탁드립니다
+                          ● 고객님들의 부담을 가장 줄여드리고&nbsp;
+                          합리적인가격과 친절로 보답해드릴께요~
+                          
+                          감사합니다~~^^
+                        </span>
+                        <span class="font-xs color-gray">후기 621 · 단골 2,384 · 용달</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/11374189/1671702485012/MDdlZWMzM2RjYmFkOTA5NzhiMTBlN2JjZjA5NGI2MGRkZDcxYjhkZTFhYzUzY2UwYTE5OTA5MDIzODdjZTc1OC5qcGc=.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">나르샤 용달 이사</span>
+                          <span class="ns-store-place">중앙동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          (성남당근 고객님들이  제일 많이 
+                          찾는 1등 성남대표 나르샤 이사)
+                          이사와 운반은 나르샤 이사로
+                          원룸 투룸 포장 반포장 가정집이사
+                          가전제품 가구 운송까지
+                          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                          차량에 리프트가 설치되어 편안하고 
+                          안전하게 이사와 운반을 해드립니다.
+                          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                          # 이사 # 가전가구운송 
+                          # 집안 가전가구 이동 
+                          # 지방이사 # 지방용달 
+                          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                        </span>
+                        <span class="font-xs color-gray">후기 665 · 단골 2,302 · 이사</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt md-bb flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/15745237/1623206208454/38c0ec492f7d4a2cae392beab8def64045862a818bd38ee7bad73a06e7eb0dd0.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">쿠팡플렉스</span>
+                          <span class="ns-store-place">신천동</span>
+                        </div>
+                        <span class="ns-store-info">원하는 날, 집 근처에서 가능한 꿀 투잡!🍯</span>
+                        <span class="font-xs color-gray">후기 58 · 단골 2,284 · 배송</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt d-none d-md-block me-md-5">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/52056/1652099986435/fee6601cea735a691069e73651cbfd664a92c558ad40d2f2216bc812770994af.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">이기사 개인용달</span>
+                          <span class="ns-store-place">가락동</span>
+                        </div>
+                        <span class="ns-store-info">☆☆ 고객후기 1등 꼼꼼한 일처리 친절업체  ☆☆
+  
+                          이기사 개인용달 견적문의 010-3263-6070 </span>
+                        <span class="font-xs color-gray">후기 884 · 단골 2,201 · 용달</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="ns-store-item bt d-none d-md-block flex-md-grow-1">
+                    <a class="ns-store-group" href="">
+                      <img src="https://dnvefa72aowie.cloudfront.net/business/bizPlatform/profile/34882823/1632310381955/75043575fd24a0e6bf9ea004398e60c19cbd9f57475ae885395383ad60192a58.jpeg?q=82&s=640x640&t=crop" class="thumbnail-image">
+                      <div class="ns-store-info-group">
+                        <div class="ns-store-info-title">
+                          <span class="ns-store-name">당근마켓 가구운송 원투룸이사</span>
+                          <span class="ns-store-place">서초동</span>
+                        </div>
+                        <span class="ns-store-info">
+                          ❤당근마켓 운송 최저가격❤
+                          🎈운송 이용자 단골 2000명 넘는이유가있습니다🎈 
+                          운송 가구 가전제품 소파 냉장고 에어컨 메트리스 침대 등 가능합니다
+                          이사 관련 원룸,투룸까지 가능합니다
+                          
+                          ❤️ 후기 작성 할인❤️
+                           후기작성 확인 후 5퍼센트 할인 적용 이벤트 진행 중 입니다 ^^
+                          
+                          예약금 관련해서는 이사 해당일로부터 5일전까지 취소시만 환불 가능합니다.
+                        </span>
+                        <span class="font-xs color-gray">후기 52 · 단골 2,189 · 용달</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -489,14 +1703,14 @@
           </ul>
         </section>
 
-        <section class="ns-business">
+        <section class="ns-banner">
           <!-- PC -->
-          <div class="d-none d-md-flex ns-business-content">
+          <div class="d-none d-md-flex ns-banner-content">
             <div>
               <img alt="town image" src="https://www.daangn.com/_next/static/media/ic_category_town_colored_m.13979d69.svg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1">
             </div>
-            <div class="ns-business-text">
-              <h5 class="fw-bold m-0">가게를 운영하고 계신가요?</h5>
+            <div class="ns-banner-text">
+              <h5>가게를 운영하고 계신가요?</h5>
               <span>당근마켓에 등록하고 이웃에게 알려보세요!</span>
             </div>
             <div class="align-self-center">
@@ -504,10 +1718,10 @@
             </div>
           </div>
           <!-- tablet -->
-          <div class="d-md-none ns-business-content">
+          <div class="d-md-none ns-banner-content">
             <div class="d-flex flex-column">
-              <div class="ns-business-text">
-                <h5 class="m-0">가게를 운영하고 계신가요?</h5>
+              <div class="ns-banner-text">
+                <h5>가게를 운영하고 계신가요?</h5>
                 <span>당근마켓에 등록하고 이웃에게 알려보세요!</span>
               </div>
               <div>
@@ -543,7 +1757,7 @@
             </ul>
           </div>
           <div>
-            <p class="fw-bold font-small">당근 마켓 앱 다운로드</p>
+            <p class="footer-download fw-bold font-small">당근 마켓 앱 다운로드</p>
             <div class="footer-button-group">
               <button type="button" class="btn footer-button"><i class="bi bi-apple me-1 fs-5"></i><span class="font-small">App Store</span></button>
               <button type="button" class="btn footer-button ms-2"><i class="bi bi-google-play me-1 fs-5"></i><span class="font-small">Google Play</span></button>
@@ -570,7 +1784,7 @@
               <li class="ns-footer-item font-small"><a class="home-topic-link" href="">인재 채용</a></li>
             </ul>
           </div>
-          <div class="d-flex">
+          <div class="footer-download d-flex">
             <span class="fw-bold font-xs">당근마켓 앱 다운로드</span>
             <span class="fw-bold font-xs"><a class="footer-app" href="">iOS<i class="ms-2 bi bi-arrow-up-right"></i></a></span>
             <span class="fw-bold font-xs"><a class="footer-app" href="">Android<i class="ms-2 bi bi-arrow-up-right"></i></a></span>
