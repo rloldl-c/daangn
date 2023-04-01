@@ -602,10 +602,20 @@ input:focus {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .home-topic-link {
+    font-size: 0.8rem;
+  }
+}
+
 /* main-footer */
 
 .home-footer, .footer-bottom, .bt {
   border-top: 1px solid #eaebee;
+}
+
+.home-footer {
+  padding: 0 1rem;
 }
 
 .footer-content, .jobs-first-content, .jobs-mid {
@@ -1134,10 +1144,6 @@ input:focus {
 
   .ns-footer-list {
     width: 26%;
-  }
-
-  .ns-footer-list .home-topic-link {
-    font-size: 0.8rem;
   }
 }
 
