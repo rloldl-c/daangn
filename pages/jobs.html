@@ -53,7 +53,7 @@
               </ul>
             </div>
           </div>
-          <button class="offcanvas-toggler offcanvas-search-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="offcanvas-toggler" id="offcanvas-search-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-search"></i>
           </button>
           <div class="offcanvas offcanvas-top d-md-none" id="offcanvasSearch" role="search">
@@ -87,7 +87,7 @@
       <section class="jobs-first">
         <div class="jobs-first-content">
           <h1 class="jobs-title">우리 동네에서 찾는<br>당근알바</h1>
-          <p class="jobs-text">걸어서 10분 거리의<br>동네 알바들 여기 다 있어요.</p>
+          <p class="d-none d-md-block jobs-text">걸어서 10분 거리의<br>동네 알바들 여기 다 있어요.</p>
           <div class="jobs-first-image">
             <img class="jobs-image" src="https://www.daangn.com/_next/static/media/jobs_hero_3x.79687414.png" alt="">
           </div>
@@ -107,12 +107,12 @@
               <span class="jobs-mid-item-pay">월급 200,000</span>
             </div>
           </div>
-          <div class="jobs-mid-item pt-0">
+          <div class="jobs-mid-item pt-md-0">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="고척동 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/origin/article/202203/7e4e461eb8ffc97954a3d668b80fd6e0eeb4354b953690f7dd91903543d9eb98.jpg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
             <div class="jobs-mid-item-info">
-              <span class="jobs-mid-item-title">고척구장 줄서주실분 시간당 10000원(3월 19일)</span>
+              <span class="jobs-mid-item-title">고척구장 줄서주실분 시간당 10000원(3월19일)</span>
               <span class="jobs-mid-item-place">서울특별시 구로구 고척동</span>
               <span class="jobs-mid-item-pay">시급 10,000</span>
             </div>
@@ -177,7 +177,7 @@
               <span class="jobs-mid-item-pay">시급 9,620</span>
             </div>
           </div>
-          <div class="jobs-mid-item">
+          <div class="d-none d-md-flex jobs-mid-item">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="반포동 하임스터디카페 반포점 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/jobs/article/26706/1679169061169/job-post-2346268851.jpeg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
@@ -187,7 +187,7 @@
               <span class="jobs-mid-item-pay">시급 12,000</span>
             </div>
           </div>
-          <div class="jobs-mid-item">
+          <div class="d-none d-md-flex jobs-mid-item">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="동면 베스트홈클린 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/jobs/article/27406474/1679320255948/job-post-2894070702.jpeg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
@@ -200,18 +200,38 @@
         </div>
 
         <a href="https://www.daangn.com/kr/jobs/about/">
-          <div class="jobs-mid-banner">
+          <div class="jobs-banner jobs-mid-banner-bg">
             <div class="jobs-mid-banner-content">
-              <div class="jobs-mid-banner-image">
+              <div class="jobs-mid-banner-image d-none d-md-block">
                 <img class="jobs-image" alt="유니폼이 그려진 이력서" src="https://www.daangn.com/_next/static/media/jobs_banner_resume.61639a29.png" decoding="async" data-nimg="fill">
               </div>
-              <span class="jobs-mid-banner-text">당근알바 이용방법이 궁금하다면<br>지금 바로 알아보세요!</span>
+              <span class="jobs-banner-text">당근알바 이용방법이 궁금하다면<br>지금 바로 알아보세요!</span>
             </div>
-            <span class="jobs-mid-button">이용방법 알아보기</span>
+            <button class="jobs-button">이용방법 알아보기</button>
           </div>
         </a>
 
         <div class="jobs-mid-content">
+          <div class="d-flex d-md-none jobs-mid-item">
+            <div class="jobs-mid-image">
+              <img class="jobs-image" alt="반포동 하임스터디카페 반포점 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/jobs/article/26706/1679169061169/job-post-2346268851.jpeg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
+            </div>
+            <div class="jobs-mid-item-info">
+              <span class="jobs-mid-item-title">스터디카페 관리 및 청소</span>
+              <span class="jobs-mid-item-place">하임스터디카페 반포점 ・ 서울특별시 서초구 반포동</span>
+              <span class="jobs-mid-item-pay">시급 12,000</span>
+            </div>
+          </div>
+          <div class="d-flex d-md-none jobs-mid-item">
+            <div class="jobs-mid-image">
+              <img class="jobs-image" alt="동면 베스트홈클린 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/jobs/article/27406474/1679320255948/job-post-2894070702.jpeg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
+            </div>
+            <div class="jobs-mid-item-info">
+              <span class="jobs-mid-item-title">입주청소/이사청소 함께 하실 분 모십니다~</span>
+              <span class="jobs-mid-item-place">베스트홈클린 ・ 경상남도 양산시 동면</span>
+              <span class="jobs-mid-item-pay">일급 130,000</span>
+            </div>
+          </div>
           <div class="jobs-mid-item pt-0">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="퇴계동 나눔베이커리 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/jobs/article/17127621/1659624436510/job-post-354286436.jpeg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
@@ -222,7 +242,7 @@
               <span class="jobs-mid-item-pay">시급 9,620</span>
             </div>
           </div>
-          <div class="jobs-mid-item pt-0">
+          <div class="jobs-mid-item pt-md-0">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="강동면 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/origin/article/202203/7e4e461eb8ffc97954a3d668b80fd6e0eeb4354b953690f7dd91903543d9eb98.jpg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
@@ -272,7 +292,7 @@
               <span class="jobs-mid-item-pay">시급 11,000</span>
             </div>
           </div>
-          <div class="jobs-mid-item">
+          <div class="jobs-mid-item d-none d-md-flex">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="복대동 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/jobs/article/45342000/1659668476850/job-post-2390862494.jpeg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
@@ -282,7 +302,7 @@
               <span class="jobs-mid-item-pay">건당 30,000</span>
             </div>
           </div>
-          <div class="jobs-mid-item">
+          <div class="jobs-mid-item d-none d-md-flex">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="봉담읍 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/origin/article/202203/7e4e461eb8ffc97954a3d668b80fd6e0eeb4354b953690f7dd91903543d9eb98.jpg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
@@ -292,7 +312,7 @@
               <span class="jobs-mid-item-pay">건당 15,000</span>
             </div>
           </div>
-          <div class="jobs-mid-item">
+          <div class="jobs-mid-item d-none d-md-flex">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="원천동 아이지니 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/jobs/article/52051869/1666790747747/job-post-1867136106.jpeg?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
@@ -302,7 +322,7 @@
               <span class="jobs-mid-item-pay">일급 50,000</span>
             </div>
           </div>
-          <div class="jobs-mid-item">
+          <div class="jobs-mid-item d-none d-md-flex">
             <div class="jobs-mid-image">
               <img class="jobs-image" alt="장천동 순천시 아르바이트 장소" src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/c325205632e7e3ffd36a2a418cd90b870dc0f74d5d542e73642cb292d67194ea.webp?q=95&s=1440x1440&t=inside" decoding="async" data-nimg="fill">
             </div>
@@ -315,14 +335,15 @@
         </div>
 
         <a href="karrot://">
-          <div class="jobs-bottom-banner">
+          <div class="jobs-banner jobs-bottom-banner-bg">
             <div class="jobs-mid-banner-content">
-              <div class="jobs-bottom-banner-image">
+              <div class="d-none d-md-block jobs-bottom-banner-image">
                 <img class="jobs-image" alt="유니폼이 그려진 마커" src="https://www.daangn.com/_next/static/media/jobs_banner_marker.41df6e0b.png" decoding="async" data-nimg="fill">
               </div>
-              <span class="jobs-mid-banner-text">우리동네 알바가 궁금하다면<br>당근마켓에서 바로 찾아보세요!</span>
+              <span class="d-none d-md-block jobs-banner-text">우리동네 알바가 궁금하다면<br>당근마켓에서 바로 찾아보세요!</span>
+              <span class="d-md-none jobs-banner-text">걸어서 10분 거리의<br>동네 알바, 당근마켓에 다 있어요.</span>
             </div>
-            <span class="jobs-mid-button">앱 다운로드 하기</span>
+            <button class="jobs-button">앱 다운로드 하기</button>
           </div>
         </a>
       </section>
@@ -350,8 +371,8 @@
               <li class="ns-footer-item font-small"><a class="home-topic-link" href="">인재 채용</a></li>
             </ul>
           </div>
-          <div class="footer-downroad">
-            <p class="fw-bold font-small">당근 마켓 앱 다운로드</p>
+          <div>
+            <p class="footer-download fw-bold font-small">당근 마켓 앱 다운로드</p>
             <div class="footer-button-group">
               <button type="button" class="btn footer-button"><i class="bi bi-apple me-1 fs-5"></i><span class="font-small">App Store</span></button>
               <button type="button" class="btn footer-button ms-2"><i class="bi bi-google-play me-1 fs-5"></i><span class="font-small">Google Play</span></button>
@@ -378,7 +399,7 @@
               <li class="ns-footer-item font-small"><a class="home-topic-link" href="">인재 채용</a></li>
             </ul>
           </div>
-          <div class="d-flex">
+          <div class="footer-download d-flex">
             <span class="fw-bold font-xs">당근마켓 앱 다운로드</span>
             <span class="fw-bold font-xs"><a class="footer-app" href="">iOS<i class="ms-2 bi bi-arrow-up-right"></i></a></span>
             <span class="fw-bold font-xs"><a class="footer-app" href="">Android<i class="ms-2 bi bi-arrow-up-right"></i></a></span>
@@ -390,6 +411,7 @@
             <div class="footer-info">
               <div>
                 <span class="font-xs"><span class="fw-bold">대표</span> 김용현, 황도연</span>
+                <span></span>
                 <span class="font-xs"><span class="fw-bold">사업자번호</span> 375-87-00088</span>
               </div>
               <div>
@@ -400,6 +422,7 @@
               </div>
               <div>
                 <span class="font-xs"><span class="fw-bold">전화</span> 1544-9796</span>
+                <span></span>
                 <span class="font-xs"><span class="fw-bold">고객문의</span> cs@daangnservice.com</span>
               </div>
             </div>
