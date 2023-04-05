@@ -52,7 +52,7 @@ ul {
   color: #868B94;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .md-bb {
     border-bottom: 1px solid #eaebee;
   }
@@ -84,8 +84,8 @@ ul {
   flex-wrap: initial;
 }
 
-.brand, .thumbnail-image {
-  margin-right: 1.5rem;
+.brand {
+  margin-right: 2.5rem;
 }
 
 @media (max-width: 767.9px){
@@ -230,6 +230,10 @@ ul {
   flex-grow: 1;
 }
 
+/* #offcanvasMenu {
+  padding-right: 3rem;
+} */
+
 @media (min-width: 767.9px) and (max-width: 992px) {
   #offcanvas-search-toggler {
     display: inline-block !important;
@@ -252,7 +256,7 @@ ul {
 .nav-item {
   font-weight: bold;
   font-size: 18px;
-  margin: 0 0.8rem;
+  margin: 0;
 }
 
 @media (max-width: 767.9px) {
@@ -272,6 +276,8 @@ ul {
 
 .nav-link {
   color: #4d5159 !important;
+  margin-right: 1.8rem;
+  line-height: 1.3;
 }
 
 .nav-link:hover {
@@ -602,7 +608,7 @@ input:focus {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .home-topic-link {
     font-size: 0.8rem;
   }
@@ -710,6 +716,10 @@ input:focus {
   line-height: 1;
 }
 
+.dropdown-toggle {
+  padding: 0;
+}
+
 .dropdown-toggle::after {
   border: 0;
 }
@@ -731,7 +741,7 @@ input:focus {
   margin-right: 0.8rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer-app {
     text-decoration: none;
     margin-left: 1.5rem;
@@ -774,7 +784,7 @@ input:focus {
   height: 260px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-first {
     height: 18.5rem;
   }
@@ -796,7 +806,7 @@ input:focus {
   }
 }
 
-.ns-first-image, .jobs-first-image {
+.ns-first-image, .jobs-first-image, .realty-first-image, .car-first-image {
   position: absolute;
   bottom: 0;
 }
@@ -816,7 +826,7 @@ input:focus {
   padding: 3.2rem 1rem 4.2rem;
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
   .ns-content {
     padding: 1.5rem 1rem 1rem;
   }
@@ -862,7 +872,7 @@ input:focus {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-mid-button {
     padding: 0.4rem 0.7rem;
     font-size: 0.8rem;
@@ -904,7 +914,7 @@ input:focus {
   width: calc(50% - 8px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .thumbnail-image {
     width: 4rem;
     height: 4rem;
@@ -953,6 +963,10 @@ input:focus {
   line-height: 1.3;
 }
 
+.thumbnail-image {
+  margin-right: 1.5rem;
+}
+
 .ns-store-name, .ns-user-id {
   font-weight: bold;
 }
@@ -981,7 +995,7 @@ input:focus {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-mid-bottom {
     margin-top: 6rem;
   }
@@ -997,7 +1011,7 @@ input:focus {
   flex-direction: column;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-user-id {
     font-size: 0.86rem;
   }
@@ -1017,7 +1031,7 @@ input:focus {
   font-size: 0.75rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-badge {
     font-size: 0.6rem;
   }
@@ -1061,7 +1075,7 @@ input:focus {
   padding-top: 0.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-text-info {
     font-size: 0.75rem;
   }
@@ -1097,7 +1111,7 @@ input:focus {
   padding: 0.5rem 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-banner {
     margin-top: 2rem;
     margin-bottom: 1.8rem;
@@ -1134,15 +1148,16 @@ input:focus {
 
 .ns-footer-list {
   margin-bottom: 0;
-  margin-right: 2rem;
+  margin-right: 2.8rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ns-footer-list-group {
     margin-top: 0.5rem;
   }
-
+  
   .ns-footer-list {
+    margin-right: 1rem;
     width: 26%;
   }
 }
@@ -1155,7 +1170,7 @@ input:focus {
 /* jobs */
 /* jobs-first */
 
-.jobs-first {
+.jobs-first-bg {
   background-color: #ffe2d2;
 }
 
@@ -1164,20 +1179,20 @@ input:focus {
   padding-top: 3rem;
 }
 
-.jobs-first-image {
+.jobs-first-image, .realty-first-image, .car-first-image {
   left: 50%;
   right: 0;
   width: 603px;
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jobs-first-content {
     padding: 1.5rem 1rem;
     height: 18.5rem;
   }
 
-  .jobs-first-image {
+  .jobs-first-image, .realty-first-image, .car-first-image {
     width: 469px;
     overflow: hidden;
     left: 50%;
@@ -1191,7 +1206,7 @@ input:focus {
   padding-bottom: 5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jobs-mid {
     padding: 0 1rem 2.5rem 1rem;
   }
@@ -1222,7 +1237,7 @@ input:focus {
   max-height: 6.8rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jobs-mid-item {
     padding: 1rem 0;
     width: 100%;
@@ -1259,6 +1274,11 @@ input:focus {
   font-size: 1.125rem;
   margin-bottom: 0.2rem;
   line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .jobs-mid-item-place {
@@ -1273,7 +1293,7 @@ input:focus {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jobs-mid-item-title {
     font-size: 1rem;
     margin-bottom: 0.2rem;
@@ -1300,7 +1320,7 @@ input:focus {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jobs-banner {
     padding: 1.5rem;
     margin: 2rem 0 3rem 0;
@@ -1341,7 +1361,7 @@ input:focus {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jobs-banner-text {
     font-size: 1rem;
     line-height: 1.4;
@@ -1362,4 +1382,42 @@ input:focus {
 .jobs-bottom-banner-image {
   width: 54px;
   margin-right: 1.8rem;
+}
+
+/* realty */
+/* realty-first */
+.realty-bg {
+  background-color: #d2edfa;
+}
+
+.realty-first-image {
+  width: 30.3rem;
+  height: 16rem;
+  bottom: 0.8rem;
+}
+
+@media (max-width: 767px) {
+  .realty-first-image {
+    width: 18.5rem;
+    height: auto;
+    bottom: 0;
+  }
+}
+
+.realty-banner-image {
+  width: 4.5rem;
+  margin-right: 1.5rem;
+}
+
+/* car */
+
+.car-first-image {
+  width: 25rem;
+}
+
+@media (max-width: 767px) {
+  .car-first-image {
+    width: 17.5rem;
+    height: auto;
+  }
 }
